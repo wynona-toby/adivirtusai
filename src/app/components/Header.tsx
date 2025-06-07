@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const navigationItems = [
   { label: "Pricing", href: "/pricing" },
@@ -10,11 +10,6 @@ const navigationItems = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
@@ -61,29 +56,19 @@ export default function Header() {
               className="text-white hover:text-gray-300 focus:outline-none"
               aria-label="Toggle mobile menu"
             >
-              {mounted ? (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" suppressHydrationWarning>
-                  {isMobileMenuOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              ) : (
-                <div className="h-6 w-6 flex items-center justify-center">
-                  <div className="space-y-1">
-                    <div className="w-6 h-0.5 bg-white"></div>
-                    <div className="w-6 h-0.5 bg-white"></div>
-                    <div className="w-6 h-0.5 bg-white"></div>
-                  </div>
-                </div>
-              )}
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation Menu */}
-        {mounted && isMobileMenuOpen && (
+        {isMobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 backdrop-blur-md rounded-lg mt-2">
               {navigationItems.map((item) => (

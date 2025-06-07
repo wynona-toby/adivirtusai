@@ -4,6 +4,61 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CardSwap, { Card } from '../CardSwap/CardSwap';
 
+// Card configurations
+const cardConfigs = [
+  {
+    icon: "⚡",
+    title: "Lightning Fast",
+    description: "Built with cutting-edge technology stack for unmatched performance and reliability.",
+    status: "Active",
+    borderColor: "rgba(59, 130, 246, 0.2)",
+    gradientFrom: "blue-500/5",
+    gradientTo: "blue-500/10",
+    iconBg: "blue-500/20",
+    iconBorder: "rgba(59, 130, 246, 0.3)",
+    statusColor: "blue-400",
+    statusIcon: <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+  },
+  {
+    icon: "🎯",
+    title: "Pixel Perfect",
+    description: "Fluid animations powered by GSAP with frame-perfect timing and smooth transitions.",
+    status: "Optimized",
+    borderColor: "rgba(16, 185, 129, 0.2)",
+    gradientFrom: "emerald-500/5",
+    gradientTo: "emerald-500/10",
+    iconBg: "emerald-500/20",
+    iconBorder: "rgba(16, 185, 129, 0.3)",
+    statusColor: "emerald-400",
+    statusIcon: (
+      <div className="flex space-x-1">
+        <div className="w-1 h-3 sm:h-4 bg-emerald-500 rounded-full animate-pulse"></div>
+        <div className="w-1 h-4 sm:h-6 bg-emerald-500 rounded-full animate-pulse" style={{animationDelay: '0.1s'}}></div>
+        <div className="w-1 h-2 sm:h-3 bg-emerald-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+      </div>
+    )
+  },
+  {
+    icon: "🎨",
+    title: "Fully Flexible",
+    description: "Completely customizable and adaptable to match your brand and design system perfectly.",
+    status: "Themed",
+    borderColor: "rgba(147, 51, 234, 0.2)",
+    gradientFrom: "purple-500/5",
+    gradientTo: "purple-500/10",
+    iconBg: "purple-500/20",
+    iconBorder: "rgba(147, 51, 234, 0.3)",
+    statusColor: "purple-400",
+    statusIcon: (
+      <div className="flex space-x-1">
+        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-purple-500 rounded-full"></div>
+        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-pink-500 rounded-full"></div>
+        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-blue-500 rounded-full"></div>
+      </div>
+    )
+  }
+];
+
 const Feature: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -69,9 +124,7 @@ const Feature: React.FC = () => {
           variants={textVariants}
         >
           <span className="block">Card stacks have</span>
-          <span className="text-white">
-            never looked
-          </span>
+          <span className="text-white">never looked</span>
           <span className="block">so good</span>
         </motion.h1>
 
@@ -107,25 +160,12 @@ const Feature: React.FC = () => {
         </motion.div>
       </motion.div>
 
-      {/* 
-        🎯 CARD POSITIONING SECTION - Edit the position here:
-        
-        To adjust card position, modify these values:
-        - Vertical: Change "top-[40%]" and "-translate-y-[40%]" 
-          • top-[30%] = higher up
-          • top-[50%] = middle 
-          • top-[60%] = lower down
-        
-        - Horizontal: Change the "translate-x-[X%]" values
-          • translate-x-[10%] = more visible
-          • translate-x-[30%] = more hidden/emerging
-      */}
+      {/* Cards section */}
       <motion.div 
         className="absolute right-0 top-[40%] transform -translate-y-[50%] translate-x-[30%] sm:translate-x-[15%] md:translate-x-[10%] lg:translate-x-[20%] xl:translate-x-[10%]"
         variants={cardVariants}
       >
         <div className="relative">
-          {/* Responsive container - Increased sizes */}
           <div className="w-[400px] h-[500px] sm:w-[480px] sm:h-[580px] md:w-[550px] md:h-[650px] lg:w-[600px] lg:h-[700px] xl:w-[700px] xl:h-[800px]">
             <CardSwap
               cardDistance={70}
@@ -137,129 +177,54 @@ const Feature: React.FC = () => {
               skewAmount={8}
               easing="elastic"
             >
-              <Card>
-                <div className="p-6 sm:p-8 h-full flex flex-col justify-between text-white bg-black shadow-2xl relative overflow-hidden rounded-xl will-change-transform transform-gpu"
-                     style={{
-                       boxShadow: `
-                         0 0 0 1px rgba(59, 130, 246, 0.2),
-                         0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                         0 10px 10px -5px rgba(0, 0, 0, 0.04)
-                       `
-                     }}>
-                  {/* Subtle accent glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-blue-500/10 rounded-xl"></div>
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm"
-                           style={{ boxShadow: '0 0 0 1px rgba(59, 130, 246, 0.3)' }}>
-                        <span className="text-xl sm:text-2xl">⚡</span>
-                      </div>
-                      <div className="text-xs uppercase tracking-wider text-blue-400 font-medium">Reliable</div>
-                    </div>
+              {cardConfigs.map((config, index) => (
+                <Card key={index}>
+                  <div 
+                    className="p-6 sm:p-8 h-full flex flex-col justify-between text-white bg-black shadow-2xl relative overflow-hidden rounded-xl will-change-transform transform-gpu"
+                    style={{
+                      boxShadow: `
+                        0 0 0 1px ${config.borderColor},
+                        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                        0 10px 10px -5px rgba(0, 0, 0, 0.04)
+                      `
+                    }}
+                  >
+                    {/* Background effects */}
+                    <div className={`absolute inset-0 bg-gradient-to-br from-${config.gradientFrom} via-transparent to-${config.gradientTo} rounded-xl`}></div>
+                    <div className={`absolute ${index === 0 ? 'top-0 right-0' : index === 1 ? 'bottom-0 left-0' : 'top-1/2 right-0'} w-24 h-24 ${index === 1 ? 'w-32 h-32' : index === 2 ? 'w-28 h-28' : ''} bg-${config.gradientFrom.split('/')[0]}/10 rounded-full blur-2xl`}></div>
                     
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white">Lightning Fast</h3>
-                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                      Built with cutting-edge technology stack for unmatched performance and reliability.
-                    </p>
-                  </div>
-
-                  <div className="relative z-10">
-                    <div className="flex items-center space-x-2 text-blue-400">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                      <span className="text-xs sm:text-sm">Active</span>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              <Card>
-                <div className="p-6 sm:p-8 h-full flex flex-col justify-between text-white bg-black shadow-2xl relative overflow-hidden rounded-xl will-change-transform transform-gpu"
-                     style={{
-                       boxShadow: `
-                         0 0 0 1px rgba(16, 185, 129, 0.2),
-                         0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                         0 10px 10px -5px rgba(0, 0, 0, 0.04)
-                       `
-                     }}>
-                  {/* Subtle accent glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-emerald-500/10 rounded-xl"></div>
-                  <div className="absolute bottom-0 left-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm"
-                           style={{ boxShadow: '0 0 0 1px rgba(16, 185, 129, 0.3)' }}>
-                        <span className="text-xl sm:text-2xl">🎯</span>
+                    <div className="relative z-10">
+                      <div className="flex items-center justify-between mb-4">
+                        <div 
+                          className={`w-10 h-10 sm:w-12 sm:h-12 bg-${config.iconBg} rounded-xl flex items-center justify-center backdrop-blur-sm`}
+                          style={{ boxShadow: `0 0 0 1px ${config.iconBorder}` }}
+                        >
+                          <span className="text-xl sm:text-2xl">{config.icon}</span>
+                        </div>
+                        <div className={`text-xs uppercase tracking-wider text-${config.statusColor} font-medium`}>
+                          {config.title.includes('Reliable') ? 'Reliable' : config.title.includes('Smooth') ? 'Smooth' : 'Customizable'}
+                        </div>
                       </div>
-                      <div className="text-xs uppercase tracking-wider text-emerald-400 font-medium">Smooth</div>
+                      
+                      <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white">{config.title}</h3>
+                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        {config.description}
+                      </p>
                     </div>
-                    
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white">Pixel Perfect</h3>
-                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                      Fluid animations powered by GSAP with frame-perfect timing and smooth transitions.
-                    </p>
-                  </div>
 
-                  <div className="relative z-10">
-                    <div className="flex items-center space-x-2 text-emerald-400">
-                      <div className="flex space-x-1">
-                        <div className="w-1 h-3 sm:h-4 bg-emerald-500 rounded-full animate-pulse"></div>
-                        <div className="w-1 h-4 sm:h-6 bg-emerald-500 rounded-full animate-pulse" style={{animationDelay: '0.1s'}}></div>
-                        <div className="w-1 h-2 sm:h-3 bg-emerald-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                    <div className="relative z-10">
+                      <div className={`flex items-center space-x-2 text-${config.statusColor}`}>
+                        {config.statusIcon}
+                        <span className="text-xs sm:text-sm">{config.status}</span>
                       </div>
-                      <span className="text-xs sm:text-sm">Optimized</span>
                     </div>
                   </div>
-                </div>
-              </Card>
-
-              <Card>
-                <div className="p-6 sm:p-8 h-full flex flex-col justify-between text-white bg-black shadow-2xl relative overflow-hidden rounded-xl will-change-transform transform-gpu"
-                     style={{
-                       boxShadow: `
-                         0 0 0 1px rgba(147, 51, 234, 0.2),
-                         0 20px 25px -5px rgba(0, 0, 0, 0.1),
-                         0 10px 10px -5px rgba(0, 0, 0, 0.04)
-                       `
-                     }}>
-                  {/* Subtle accent glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-purple-500/10 rounded-xl"></div>
-                  <div className="absolute top-1/2 right-0 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl"></div>
-                  
-                  <div className="relative z-10">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500/20 rounded-xl flex items-center justify-center backdrop-blur-sm"
-                           style={{ boxShadow: '0 0 0 1px rgba(147, 51, 234, 0.3)' }}>
-                        <span className="text-xl sm:text-2xl">🎨</span>
-                      </div>
-                      <div className="text-xs uppercase tracking-wider text-purple-400 font-medium">Customizable</div>
-                    </div>
-                    
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white">Fully Flexible</h3>
-                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                      Completely customizable and adaptable to match your brand and design system perfectly.
-                    </p>
-                  </div>
-
-                  <div className="relative z-10">
-                    <div className="flex items-center space-x-2 text-purple-400">
-                      <div className="flex space-x-1">
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-purple-500 rounded-full"></div>
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-pink-500 rounded-full"></div>
-                        <div className="w-2 h-2 sm:w-3 sm:h-3 bg-blue-500 rounded-full"></div>
-                      </div>
-                      <span className="text-xs sm:text-sm">Themed</span>
-                    </div>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              ))}
             </CardSwap>
           </div>
         </div>
       </motion.div>
-
     </motion.div>
   );
 };

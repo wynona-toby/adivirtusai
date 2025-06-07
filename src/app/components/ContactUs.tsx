@@ -4,6 +4,47 @@ import { motion } from "framer-motion";
 import BeamBackground from "./BeamBackground";
 import SplitText from "./SplitText";
 
+// Button configurations
+const buttons = [
+  {
+    type: 'secondary',
+    text: 'Contact Us',
+    className: "group relative overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 text-white",
+    hoverEffects: {
+      scale: 1.05,
+      boxShadow: "0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04)"
+    }
+  },
+  {
+    type: 'primary',
+    text: 'Demo',
+    className: "group relative overflow-hidden bg-white text-black",
+    hoverEffects: {
+      scale: 1.05,
+      boxShadow: "0 20px 25px -5px rgba(255, 255, 255, 0.25), 0 10px 10px -5px rgba(255, 255, 255, 0.1)"
+    }
+  }
+];
+
+// Decorative elements configuration
+const decorativeElements = [
+  {
+    position: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+    size: "w-96 h-96",
+    gradient: "from-blue-500/10 to-purple-500/10"
+  },
+  {
+    position: "top-1/4 right-1/4",
+    size: "w-64 h-64",
+    gradient: "from-purple-500/5 to-pink-500/5"
+  },
+  {
+    position: "bottom-1/4 left-1/4",
+    size: "w-80 h-80",
+    gradient: "from-cyan-500/5 to-blue-500/5"
+  }
+];
+
 export default function ContactUs() {
   return (
     <div className="relative w-full h-[80vh] overflow-hidden bg-black">
@@ -63,46 +104,48 @@ export default function ContactUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
           >
-            <motion.button 
-              className="group relative overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 text-white px-10 py-4 rounded-2xl text-lg font-medium min-w-[200px] shadow-2xl"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <span className="relative z-10">Contact Us</span>
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 rounded-2xl"
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-              <div className="absolute inset-0 border border-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </motion.button>
-            
-            <motion.button 
-              className="group relative overflow-hidden bg-white text-black px-10 py-4 rounded-2xl text-lg font-medium min-w-[200px] shadow-2xl"
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 20px 25px -5px rgba(255, 255, 255, 0.25), 0 10px 10px -5px rgba(255, 255, 255, 0.1)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <span className="relative z-10 font-semibold">Demo</span>
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white opacity-0 group-hover:opacity-100 rounded-2xl"
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.button>
+            {buttons.map((button) => (
+              <motion.button 
+                key={button.text}
+                className={`${button.className} px-10 py-4 rounded-2xl text-lg font-medium min-w-[200px] shadow-2xl`}
+                whileHover={button.hoverEffects}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <span className={`relative z-10 ${button.type === 'primary' ? 'font-semibold' : ''}`}>
+                  {button.text}
+                </span>
+                
+                {/* Button hover effects */}
+                {button.type === 'secondary' && (
+                  <>
+                    <motion.div 
+                      className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 rounded-2xl"
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    <div className="absolute inset-0 border border-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </>
+                )}
+                
+                {button.type === 'primary' && (
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white opacity-0 group-hover:opacity-100 rounded-2xl"
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+              </motion.button>
+            ))}
           </motion.div>
           
-          {/* Additional decorative elements */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl -z-10"></div>
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-2xl -z-10"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-2xl -z-10"></div>
+          {/* Decorative elements */}
+                     {decorativeElements.map((element, idx) => (
+             <div 
+               key={idx}
+               className={`absolute ${element.position} ${element.size} bg-gradient-to-r ${element.gradient} rounded-full blur-${idx === 0 ? '3xl' : idx === 1 ? '2xl' : '2xl'} -z-10`}
+             />
+           ))}
         </div>
       </div>
     </div>
