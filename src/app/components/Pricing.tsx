@@ -87,7 +87,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-16 sm:py-20 lg:py-32">
+    <section id="pricing" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
       

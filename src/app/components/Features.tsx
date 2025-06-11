@@ -48,7 +48,7 @@ const Features = () => {
       title: "AI-Driven Assessments & Skill Gap Analysis",
       description: "Discover your exact skill gaps in minutes with our adaptive AI assessments. Our intelligent system evaluates technical, soft, and cognitive skills to create a comprehensive skill profile, identifying precisely what you need to learn next.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" suppressHydrationWarning={true}>
           <circle cx="12" cy="12" r="10" stroke="#3B82F6" strokeWidth="2" fill="none"/>
           <circle cx="12" cy="12" r="6" fill="#3B82F6"/>
           <circle cx="12" cy="12" r="2" fill="white"/>
@@ -59,7 +59,7 @@ const Features = () => {
       title: "Personalized Learning Roadmaps",
       description: "Get a custom learning journey designed just for you. Our AI automatically curates the best content from across the web, sequences it perfectly for your learning style, and adapts the pace based on your progress and availability.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" suppressHydrationWarning={true}>
           <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="#3B82F6"/>
           <path d="M12 6L13.5 10.5L18 11L15 14L15.75 18.5L12 16.25L8.25 18.5L9 14L6 11L10.5 10.5L12 6Z" fill="white"/>
         </svg>
@@ -69,7 +69,7 @@ const Features = () => {
       title: "Real-Time HR Analytics Dashboard",
       description: "See your team's skill gaps, training progress, and business impact at a glance. Track ROI in real-time and get predictive insights on future skill needs to stay ahead of industry demands.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" suppressHydrationWarning={true}>
           <rect x="3" y="3" width="18" height="18" rx="2" stroke="#3B82F6" strokeWidth="2" fill="none"/>
           <rect x="6" y="14" width="3" height="4" fill="#3B82F6"/>
           <rect x="10" y="10" width="3" height="8" fill="#3B82F6"/>
@@ -84,7 +84,7 @@ const Features = () => {
       title: "Strategic Insights Engine",
       description: "Visualize organizational competencies with interactive heatmaps, monitor training effectiveness, and receive automated reports that benchmark your team against industry standards.",
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" suppressHydrationWarning={true}>
           <path d="M21 16V8C21 6.9 20.1 6 19 6H5C3.9 6 3 6.9 3 8V16C3 17.1 3.9 18 5 18H19C20.1 18 21 17.1 21 16Z" stroke="#3B82F6" strokeWidth="2" fill="#3B82F6"/>
           <rect x="5" y="8" width="14" height="8" fill="white"/>
           <rect x="7" y="10" width="2" height="4" fill="#3B82F6"/>
@@ -97,7 +97,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#0A0A0C] overflow-hidden py-20 lg:py-32">
+    <section id="features" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
       

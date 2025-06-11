@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Orb from '../../blocks/Backgrounds/Orb/Orb';
 
 const AthenaPage = () => {
   const ref = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isHovering, setIsHovering] = useState(false);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const containerVariants = {
@@ -43,8 +45,29 @@ const AthenaPage = () => {
     }
   };
 
+  const handleOrbHover = () => {
+    setIsHovering(true);
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0; // Reset to start
+      audioRef.current.play().catch(console.error);
+    }
+  };
+
+  const handleOrbLeave = () => {
+    setIsHovering(false);
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  };
+
   return (
-    <section className="relative min-h-screen bg-[#0A0A0B] overflow-hidden">
+    <section id="athena" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden">
+      {/* Hidden audio element */}
+      <audio ref={audioRef} preload="auto">
+        <source src="/Athena.mp3" type="audio/mpeg" />
+      </audio>
+
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
       
@@ -176,14 +199,43 @@ const AthenaPage = () => {
               variants={rightVariants}
             >
               <div className="relative">
-                {/* Orb Container */}
-                <div style={{ width: '100%', height: '600px', position: 'relative' }} className="max-w-lg mx-auto">
+                {/* Orb Container with Hover Wrapper */}
+                <div 
+                  className="relative max-w-lg mx-auto cursor-pointer"
+                  style={{ width: '100%', height: '600px' }}
+                  onMouseEnter={handleOrbHover}
+                  onMouseLeave={handleOrbLeave}
+                >
                   <Orb
                     hoverIntensity={0.5}
                     rotateOnHover={true}
                     hue={280} // Purple-blue hue to match the theme
                     forceHoverState={false}
                   />
+                  
+                  {/* Center Text Overlay */}
+                  <motion.div 
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ 
+                      opacity: isHovering ? 1 : 0.7, 
+                      scale: isHovering ? 1.1 : 1 
+                    }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                  >
+                    <span 
+                      className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
+                      style={{ 
+                        fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
+                        fontWeight: 700,
+                        textShadow: "0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(139, 92, 246, 0.3)"
+                      }}
+                    >
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+                        Athena
+                      </span>
+                    </span>
+                  </motion.div>
                 </div>
                 
                 {/* Floating Elements Around Orb */}

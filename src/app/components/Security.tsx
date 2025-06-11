@@ -43,7 +43,7 @@ const Security = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
+    <section id="security" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
       
@@ -198,49 +198,61 @@ const Security = () => {
 
             {/* Right Content - Integration Logos */}
             <motion.div 
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-2 gap-8 lg:gap-12"
               variants={itemVariants}
             >
-              {/* AWS */}
+              {/* Slack */}
               <motion.div 
-                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 px-4 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center p-4"
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="h-8 w-16" viewBox="0 0 120 30" fill="currentColor">
-                  <path className="text-slate-300" d="M30.343 19.523c-3.46 2.555-8.483 3.91-12.817 3.91-6.063 0-11.524-2.244-15.65-5.971-.324-.293-.034-.693.355-.465 4.45 2.59 9.956 4.15 15.646 4.15 3.836 0 8.058-.796 11.938-2.443.586-.249 1.077.385.528.819"/>
-                  <path className="text-slate-300" d="M31.663 17.997c-.442-.566-2.93-.268-4.047-.135-.34.041-.391-.255-.086-.469 1.982-1.394 5.238-1.002 5.616-.53.377.475-.099 3.77-1.983 5.343-.288.241-.563.113-.435-.206.418-1.044 1.357-3.37.935-4.003"/>
+                <svg className="h-12 w-auto" viewBox="0 0 127 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M27.2 80.3c0 7.3-5.9 13.2-13.2 13.2S.8 87.6.8 80.3s5.9-13.2 13.2-13.2h13.2v13.2z" fill="#E01E5A"/>
+                  <path d="M33.8 80.3c0-7.3 5.9-13.2 13.2-13.2s13.2 5.9 13.2 13.2v33c0 7.3-5.9 13.2-13.2 13.2s-13.2-5.9-13.2-13.2v-33z" fill="#E01E5A"/>
+                  <path d="M47 27.2c-7.3 0-13.2-5.9-13.2-13.2S39.7.8 47 .8s13.2 5.9 13.2 13.2v13.2H47z" fill="#36C5F0"/>
+                  <path d="M47 33.8c7.3 0 13.2 5.9 13.2 13.2S54.3 60.2 47 60.2H14c-7.3 0-13.2-5.9-13.2-13.2S6.7 33.8 14 33.8h33z" fill="#36C5F0"/>
+                  <path d="M99.8 47c0-7.3 5.9-13.2 13.2-13.2s13.2 5.9 13.2 13.2-5.9 13.2-13.2 13.2H99.8V47z" fill="#2EB67D"/>
+                  <path d="M93.2 47c0 7.3-5.9 13.2-13.2 13.2S66.8 54.3 66.8 47V14c0-7.3 5.9-13.2 13.2-13.2S93.2 6.7 93.2 14v33z" fill="#2EB67D"/>
+                  <path d="M80 99.8c7.3 0 13.2 5.9 13.2 13.2s-5.9 13.2-13.2 13.2-13.2-5.9-13.2-13.2V99.8H80z" fill="#ECB22E"/>
+                  <path d="M80 93.2c-7.3 0-13.2-5.9-13.2-13.2S72.7 66.8 80 66.8h33c7.3 0 13.2 5.9 13.2 13.2S120.3 93.2 113 93.2H80z" fill="#ECB22E"/>
                 </svg>
               </motion.div>
 
-              {/* Cloud Service */}
+              {/* Jira */}
               <motion.div 
-                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center p-4"
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.002 4.002 0 003 15z" />
+                <svg className="h-12 w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.158A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005z" fill="#2684FF"/>
+                  <path d="M24 11.513H12.429a5.218 5.218 0 0 1 5.232 5.215h2.13v2.158A5.215 5.215 0 0 1 25.005 24V12.518A1.005 1.005 0 0 1 24 11.513z" fill="#2684FF"/>
+                  <path d="M12.429 0H1.429A5.218 5.218 0 0 1 6.661 5.215h2.13v2.158A5.215 5.215 0 0 1 14.005 12.518V1.005A1.005 1.005 0 0 1 12.429 0z" fill="#2684FF"/>
                 </svg>
               </motion.div>
 
-              {/* API */}
+              {/* Notion */}
               <motion.div 
-                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center p-4"
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-blue-400 font-bold text-lg">API</span>
+                <svg className="h-12 w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466l1.823 1.447zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.747-.887l-15.177.887c-.56.047-.748.327-.748.934zm14.337-.14c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933l3.222-.187z" fill="white"/>
+                </svg>
               </motion.div>
 
-              {/* Integration Hub */}
+              {/* Asana */}
               <motion.div 
-                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center p-4"
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <svg className="h-12 w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" stroke="#F06A6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" stroke="#F06A6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                  <path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" stroke="#F06A6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
               </motion.div>
             </motion.div>

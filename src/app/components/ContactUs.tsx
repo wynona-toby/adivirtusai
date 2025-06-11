@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContactUs() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-[#0A0A0B]">
+    <section id="contact" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
       
@@ -153,6 +153,6 @@ export default function ContactUs() {
       {/* Subtle background geometric elements */}
       <div className="absolute top-1/4 left-1/4 w-32 lg:w-64 h-32 lg:h-64 border border-slate-800/20 rotate-45 opacity-10"></div>
       <div className="absolute bottom-1/3 right-1/4 w-24 lg:w-48 h-24 lg:h-48 border border-slate-700/15 rotate-12 opacity-10"></div>
-    </div>
+    </section>
   );
 } 

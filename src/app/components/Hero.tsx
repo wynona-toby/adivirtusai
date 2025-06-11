@@ -58,7 +58,7 @@ export default function Hero() {
             className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto"
             variants={itemVariants}
           >
-            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-sm shadow-emerald-400/50"></div>
+            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
             <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>AI AGENTS ACTIVE</span>
           </motion.div>
 
@@ -142,17 +142,17 @@ export default function Hero() {
             </motion.button>
             
             <motion.button
-              className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm border-2 border-slate-600/50 text-slate-200 font-semibold rounded-full hover:border-slate-400/50 relative overflow-hidden w-full sm:w-auto"
+              className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm border-2 border-slate-600/50 text-slate-200 font-semibold rounded-full hover:border-blue-400/50 relative overflow-hidden w-full sm:w-auto"
               whileHover={{ 
                 scale: 1.05,
                 backgroundColor: "rgba(51, 65, 85, 0.7)",
-                borderColor: "rgba(148, 163, 184, 0.6)"
+                borderColor: "rgba(59, 130, 246, 0.6)"
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-slate-600/20 to-slate-500/20 opacity-0 group-hover:opacity-100 rounded-full"
+                className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-500/10 opacity-0 group-hover:opacity-100 rounded-full"
                 transition={{ duration: 0.3 }}
               />
               <span className="relative z-10">View Demo</span>

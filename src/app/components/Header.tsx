@@ -3,13 +3,28 @@
 import { useState } from 'react';
 
 const navigationItems = [
-  { label: "Pricing", href: "/pricing" },
-  { label: "Info", href: "/info" },
-  { label: "Community", href: "/community" },
+  { label: "About", href: "#about" },
+  { label: "Features", href: "#features" },
+  { label: "Athena", href: "#athena" },
+  { label: "Security", href: "#security" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    
+    if (href.startsWith('#')) {
+      const targetId = href.substring(1);
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <header className="sm:fixed sm:top-0 sm:left-0 sm:right-0 sm:z-50 sm:bg-black/20 sm:backdrop-blur-sm
@@ -30,22 +45,25 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                className="text-white hover:text-gray-300 transition-colors duration-200 text-sm font-medium"
+                onClick={() => handleNavClick(item.href)}
+                className="text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium cursor-pointer"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </nav>
 
           {/* Right Side Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-white hover:text-gray-300 transition-colors duration-200 text-sm font-medium px-4 py-2 border border-white/20 rounded-lg hover:border-white/40">
+            <button 
+              onClick={() => handleNavClick('#contact')}
+              className="text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium px-4 py-2 border border-white/20 rounded-lg hover:border-blue-400/40"
+            >
               Contact Us
             </button>
-            <button className="bg-white text-black hover:bg-gray-100 transition-colors duration-200 text-sm font-medium px-4 py-2 rounded-lg">
+            <button className="bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-200 text-sm font-medium px-4 py-2 rounded-lg">
               Demo
             </button>
           </div>
@@ -57,7 +75,13 @@ export default function Header() {
               className="text-white hover:text-gray-300 focus:outline-none"
               aria-label="Toggle mobile menu"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg 
+                className="h-6 w-6" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+                suppressHydrationWarning={true}
+              >
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -73,20 +97,22 @@ export default function Header() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 backdrop-blur-md rounded-lg mt-2">
               {navigationItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="text-white hover:text-gray-300 block px-3 py-2 text-sm font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-sm font-medium w-full text-left"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <div className="border-t border-white/20 pt-3 mt-3 space-y-2">
-                <button className="w-full text-white hover:text-gray-300 transition-colors duration-200 text-sm font-medium px-3 py-2 border border-white/20 rounded-lg hover:border-white/40">
+                <button 
+                  onClick={() => handleNavClick('#contact')}
+                  className="w-full text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium px-3 py-2 border border-white/20 rounded-lg hover:border-blue-400/40"
+                >
                   Contact Us
                 </button>
-                <button className="w-full bg-white text-black hover:bg-gray-100 transition-colors duration-200 text-sm font-medium px-3 py-2 rounded-lg">
+                <button className="w-full bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-200 text-sm font-medium px-3 py-2 rounded-lg">
                   Demo
                 </button>
               </div>
