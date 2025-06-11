@@ -1,153 +1,158 @@
 "use client";
 
 import { motion } from "framer-motion";
-import BeamBackground from "./BeamBackground";
-import SplitText from "./SplitText";
-
-// Button configurations
-const buttons = [
-  {
-    type: 'secondary',
-    text: 'Contact Us',
-    className: "group relative overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 text-white",
-    hoverEffects: {
-      scale: 1.05,
-      boxShadow: "0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04)"
-    }
-  },
-  {
-    type: 'primary',
-    text: 'Demo',
-    className: "group relative overflow-hidden bg-white text-black",
-    hoverEffects: {
-      scale: 1.05,
-      boxShadow: "0 20px 25px -5px rgba(255, 255, 255, 0.25), 0 10px 10px -5px rgba(255, 255, 255, 0.1)"
-    }
-  }
-];
-
-// Decorative elements configuration
-const decorativeElements = [
-  {
-    position: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
-    size: "w-96 h-96",
-    gradient: "from-blue-500/10 to-purple-500/10"
-  },
-  {
-    position: "top-1/4 right-1/4",
-    size: "w-64 h-64",
-    gradient: "from-purple-500/5 to-pink-500/5"
-  },
-  {
-    position: "bottom-1/4 left-1/4",
-    size: "w-80 h-80",
-    gradient: "from-cyan-500/5 to-blue-500/5"
-  }
-];
 
 export default function ContactUs() {
   return (
-    <div className="relative w-full h-[80vh] overflow-hidden bg-black">
-      {/* Beam Background */}
-      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>
-        <BeamBackground 
-          beamWidth={2}
-          beamHeight={15}
-          beamNumber={12}
-          lightColor="#ffffff"
-          speed={2}
-          noiseIntensity={1.75}
-          scale={0.2}
-          rotation={0}
-        />
-      </div>
+    <div className="relative w-full min-h-screen overflow-hidden bg-[#0A0A0B]">
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
       
       {/* Content Overlay */}
-      <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 flex min-h-screen items-center justify-center">
+        <div className="mx-auto max-w-7xl px-1 sm:px-2 lg:px-3 py-12 sm:py-16 lg:py-20 text-center">
+          {/* Status Indicator */}
+          <motion.div 
+            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-sm shadow-emerald-400/50"></div>
+            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>LET'S CONNECT</span>
+          </motion.div>
+
           {/* Main Heading */}
-          <div className="mb-8">
-            <SplitText 
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-tight text-white leading-none"
-              delay={0.3}
-              duration={0.03}
-              by="chars"
-            >
-              join the
-            </SplitText>
-            <SplitText 
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-tight text-white leading-none mt-2"
-              delay={0.8}
-              duration={0.03}
-              by="chars"
-            >
-              movement
-            </SplitText>
-          </div>
+          <motion.div 
+            className="mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.85] tracking-tight"
+                style={{ 
+                  fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
+                  fontWeight: 700
+                }}>
+              <span className="block text-white">Join the</span>
+              <span className="block text-blue-400 mt-2">Movement</span>
+            </h1>
+          </motion.div>
           
           {/* Description */}
-          <div className="mb-12 max-w-2xl mx-auto">
-            <SplitText 
-              className="text-lg sm:text-xl md:text-2xl text-white/80 leading-relaxed"
-              delay={1.3}
-              duration={0.04}
-              by="words"
-            >
-              unlock the future of corporate upskilling and learning with us
-            </SplitText>
-          </div>
+          <motion.div 
+            className="mb-12 max-w-3xl mx-auto space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-normal">
+              Unlock the future of corporate upskilling and learning with us
+            </p>
+            <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-light">
+              Ready to transform your workforce? Let's discuss how our agentic AI solutions can revolutionize your team's learning journey.
+            </p>
+          </motion.div>
           
           {/* Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
           >
-            {buttons.map((button) => (
-              <motion.button 
-                key={button.text}
-                className={`${button.className} px-10 py-4 rounded-2xl text-lg font-medium min-w-[200px] shadow-2xl`}
-                whileHover={button.hoverEffects}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <span className={`relative z-10 ${button.type === 'primary' ? 'font-semibold' : ''}`}>
-                  {button.text}
-                </span>
-                
-                {/* Button hover effects */}
-                {button.type === 'secondary' && (
-                  <>
-                    <motion.div 
-                      className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 rounded-2xl"
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                    <div className="absolute inset-0 border border-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </>
-                )}
-                
-                {button.type === 'primary' && (
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-r from-gray-50 to-white opacity-0 group-hover:opacity-100 rounded-2xl"
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                )}
-              </motion.button>
-            ))}
+            <motion.button
+              className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100"
+                transition={{ duration: 0.3 }}
+              />
+              <motion.div
+                className="absolute inset-0 bg-white/20 rounded-full"
+                initial={{ scale: 0, opacity: 0 }}
+                whileHover={{ scale: 1.5, opacity: 0.1 }}
+                transition={{ duration: 0.4 }}
+              />
+              <span className="relative z-10 flex items-center justify-center">
+                Contact Us
+                <motion.span
+                  className="ml-2 inline-block"
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  →
+                </motion.span>
+              </span>
+            </motion.button>
+            
+            <motion.button
+              className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm border-2 border-slate-600/50 text-slate-200 font-semibold rounded-full hover:border-slate-400/50 relative overflow-hidden w-full sm:w-auto"
+              whileHover={{ 
+                scale: 1.05,
+                backgroundColor: "rgba(51, 65, 85, 0.7)",
+                borderColor: "rgba(148, 163, 184, 0.6)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-slate-600/20 to-slate-500/20 opacity-0 group-hover:opacity-100 rounded-full"
+                transition={{ duration: 0.3 }}
+              />
+              <span className="relative z-10">View Demo</span>
+            </motion.button>
           </motion.div>
           
-          {/* Decorative elements */}
-                     {decorativeElements.map((element, idx) => (
-             <div 
-               key={idx}
-               className={`absolute ${element.position} ${element.size} bg-gradient-to-r ${element.gradient} rounded-full blur-${idx === 0 ? '3xl' : idx === 1 ? '2xl' : '2xl'} -z-10`}
-             />
-           ))}
+          {/* Feature highlights or stats */}
+          <motion.div 
+            className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+          >
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2 }}
+            >
+              <div className="text-2xl lg:text-3xl font-bold text-white font-mono mb-2">24/7</div>
+              <div className="text-sm text-slate-400">Support Available</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.4 }}
+            >
+              <div className="text-2xl lg:text-3xl font-bold text-blue-400 font-mono mb-2">&lt;24h</div>
+              <div className="text-sm text-slate-400">Response Time</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.6 }}
+            >
+              <div className="text-2xl lg:text-3xl font-bold text-emerald-400 font-mono mb-2">100%</div>
+              <div className="text-sm text-slate-400">Success Rate</div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
+
+      {/* Subtle background geometric elements */}
+      <div className="absolute top-1/4 left-1/4 w-32 lg:w-64 h-32 lg:h-64 border border-slate-800/20 rotate-45 opacity-10"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-24 lg:w-48 h-24 lg:h-48 border border-slate-700/15 rotate-12 opacity-10"></div>
     </div>
   );
 } 
