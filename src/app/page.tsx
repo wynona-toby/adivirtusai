@@ -5,11 +5,13 @@ import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import Security from "./components/Security";
 import AthenaPage from "./athena/page";
+import About from "./components/About";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <About />
       <Features />
       <AthenaPage />
       <Pricing />

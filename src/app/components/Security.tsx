@@ -59,6 +59,14 @@ const Security = () => {
           className="text-left mb-16 lg:mb-24 max-w-4xl"
           variants={itemVariants}
         >
+          <motion.div 
+            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mb-6"
+            variants={itemVariants}
+          >
+            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
+            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>ENTERPRISE READY</span>
+          </motion.div>
+
           <motion.h1 
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6"
             variants={itemVariants}
@@ -67,11 +75,11 @@ const Security = () => {
               fontWeight: 700
             }}
           >
-            Engineered with <br />ambition
+            Engineered with <br /><span className="text-blue-400">ambition</span>
           </motion.h1>
 
           <motion.p 
-            className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-3xl"
+            className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl"
             variants={itemVariants}
           >
             Adivirtus AI is built for ambitious AI projects. You can integrate it with your existing tech stack and scale it as you grow. 
@@ -85,7 +93,7 @@ const Security = () => {
           variants={sectionVariants}
         >
           <div className="mb-8">
-            <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">SECURITY</span>
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">SECURITY</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -97,7 +105,7 @@ const Security = () => {
               >
                 Enterprise-grade security
                 <motion.span 
-                  className="inline-block ml-2"
+                  className="inline-block ml-2 text-blue-400"
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -128,21 +136,21 @@ const Security = () => {
             >
               {/* SOC Badge */}
               <motion.div 
-                className="w-24 h-24 bg-slate-800/50 rounded-2xl flex items-center justify-center border border-slate-700/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.6)" }}
+                className="w-24 h-24 bg-[#101010] rounded-2xl flex items-center justify-center border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-white font-bold text-lg">SOC</span>
+                <span className="text-blue-400 font-bold text-lg">SOC</span>
               </motion.div>
 
               {/* SOC 2 Badge */}
               <motion.div 
-                className="w-24 h-24 bg-slate-800/50 rounded-2xl flex flex-col items-center justify-center border border-slate-700/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.6)" }}
+                className="w-24 h-24 bg-[#101010] rounded-2xl flex flex-col items-center justify-center border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-white font-bold text-sm">SOC</span>
-                <span className="text-white font-bold text-lg">2</span>
+                <span className="text-blue-400 font-bold text-sm">SOC</span>
+                <span className="text-blue-400 font-bold text-lg">2</span>
               </motion.div>
             </motion.div>
           </div>
@@ -153,7 +161,7 @@ const Security = () => {
           variants={sectionVariants}
         >
           <div className="mb-8">
-            <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">INTEGRATIONS</span>
+            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">INTEGRATIONS</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -165,7 +173,7 @@ const Security = () => {
               >
                 Integrate with your tech stack
                 <motion.span 
-                  className="inline-block ml-2"
+                  className="inline-block ml-2 text-blue-400"
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -195,8 +203,8 @@ const Security = () => {
             >
               {/* AWS */}
               <motion.div 
-                className="h-16 bg-slate-800/50 rounded-xl flex items-center justify-center border border-slate-700/50 px-4"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.6)" }}
+                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 px-4 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
                 <svg className="h-8 w-16" viewBox="0 0 120 30" fill="currentColor">
@@ -207,32 +215,32 @@ const Security = () => {
 
               {/* Cloud Service */}
               <motion.div 
-                className="h-16 bg-slate-800/50 rounded-xl flex items-center justify-center border border-slate-700/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.6)" }}
+                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="h-8 w-8 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.002 4.002 0 003 15z" />
                 </svg>
               </motion.div>
 
               {/* API */}
               <motion.div 
-                className="h-16 bg-slate-800/50 rounded-xl flex items-center justify-center border border-slate-700/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.6)" }}
+                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-slate-300 font-bold text-lg">API</span>
+                <span className="text-blue-400 font-bold text-lg">API</span>
               </motion.div>
 
-              {/* Slack-style */}
+              {/* Integration Hub */}
               <motion.div 
-                className="h-16 bg-slate-800/50 rounded-xl flex items-center justify-center border border-slate-700/50"
-                whileHover={{ scale: 1.05, borderColor: "rgba(148, 163, 184, 0.6)" }}
+                className="h-16 bg-[#101010] rounded-xl flex items-center justify-center border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <svg className="h-8 w-8 text-slate-300" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.521-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.523 2.521h-2.521V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.521A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.523v-2.521h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+                <svg className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </motion.div>
             </motion.div>
