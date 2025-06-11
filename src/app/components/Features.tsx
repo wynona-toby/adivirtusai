@@ -43,39 +43,56 @@ const Features = () => {
     }
   };
 
-  const employeeFeatures = [
+  const allFeatures = [
     {
       title: "AI-Driven Assessments & Skill Gap Analysis",
       description: "Discover your exact skill gaps in minutes with our adaptive AI assessments. Our intelligent system evaluates technical, soft, and cognitive skills to create a comprehensive skill profile, identifying precisely what you need to learn next.",
-      icon: "🎯",
-      gradient: "from-blue-500/20 to-cyan-500/20"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#3B82F6" strokeWidth="2" fill="none"/>
+          <circle cx="12" cy="12" r="6" fill="#3B82F6"/>
+          <circle cx="12" cy="12" r="2" fill="white"/>
+        </svg>
+      )
     },
     {
       title: "Personalized Learning Roadmaps",
       description: "Get a custom learning journey designed just for you. Our AI automatically curates the best content from across the web, sequences it perfectly for your learning style, and adapts the pace based on your progress and availability.",
-      icon: "🚀",
-      gradient: "from-emerald-500/20 to-blue-500/20"
-    }
-  ];
-
-  const hrFeatures = [
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="#3B82F6"/>
+          <path d="M12 6L13.5 10.5L18 11L15 14L15.75 18.5L12 16.25L8.25 18.5L9 14L6 11L10.5 10.5L12 6Z" fill="white"/>
+        </svg>
+      )
+    },
     {
       title: "Real-Time HR Analytics Dashboard",
       description: "See your team's skill gaps, training progress, and business impact at a glance. Track ROI in real-time and get predictive insights on future skill needs to stay ahead of industry demands.",
-      icon: "📊",
-      gradient: "from-purple-500/20 to-blue-500/20"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" stroke="#3B82F6" strokeWidth="2" fill="none"/>
+          <rect x="6" y="14" width="3" height="4" fill="#3B82F6"/>
+          <rect x="10" y="10" width="3" height="8" fill="#3B82F6"/>
+          <rect x="14" y="6" width="3" height="12" fill="#3B82F6"/>
+          <circle cx="7.5" cy="12" r="1" fill="white"/>
+          <circle cx="11.5" cy="8" r="1" fill="white"/>
+          <circle cx="15.5" cy="4" r="1" fill="white"/>
+        </svg>
+      )
     },
     {
       title: "Strategic Insights Engine",
       description: "Visualize organizational competencies with interactive heatmaps, monitor training effectiveness, and receive automated reports that benchmark your team against industry standards.",
-      icon: "🎯",
-      gradient: "from-blue-500/20 to-indigo-500/20"
-    },
-    {
-      title: "Virtual CHRO AI Agent",
-      description: "Chat or video call with your AI Chief Human Resources Officer anytime. Get instant strategic advice, training recommendations, and answers to complex HR questions - like having an expert CHRO available 24/7.",
-      icon: "🤖",
-      gradient: "from-emerald-500/20 to-teal-500/20"
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 16V8C21 6.9 20.1 6 19 6H5C3.9 6 3 6.9 3 8V16C3 17.1 3.9 18 5 18H19C20.1 18 21 17.1 21 16Z" stroke="#3B82F6" strokeWidth="2" fill="#3B82F6"/>
+          <rect x="5" y="8" width="14" height="8" fill="white"/>
+          <rect x="7" y="10" width="2" height="4" fill="#3B82F6"/>
+          <rect x="10" y="11" width="2" height="3" fill="#3B82F6"/>
+          <rect x="13" y="9" width="2" height="5" fill="#3B82F6"/>
+          <rect x="16" y="12" width="2" height="2" fill="#3B82F6"/>
+        </svg>
+      )
     }
   ];
 
@@ -112,8 +129,7 @@ const Features = () => {
               fontWeight: 700
             }}
           >
-            <span className="block">Built for</span>
-            <span className="block text-blue-400">Everyone</span>
+            Built for <span className="text-blue-400">Everyone</span>
           </motion.h2>
 
           <motion.p 
@@ -124,49 +140,29 @@ const Features = () => {
           </motion.p>
         </motion.div>
 
-        {/* For Employees Section */}
+        {/* Features Grid */}
         <motion.div 
-          className="mb-20 lg:mb-32"
+          className="space-y-6 lg:space-y-8"
           variants={itemVariants}
         >
-          <motion.div 
-            className="flex items-center justify-center mb-12"
-            variants={itemVariants}
-          >
-            <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent flex-1 max-w-16 sm:max-w-20"></div>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mx-4 sm:mx-6 text-center"
-                style={{ fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif' }}>For Employees</h3>
-            <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent flex-1 max-w-16 sm:max-w-20"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {employeeFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="group relative"
-                variants={cardVariants}
-                whileHover={{ 
-                  y: -8,
-                  transition: { duration: 0.3, ease: "easeOut" }
-                }}
-              >
-                <div className="relative bg-[#0A0A0C] backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 sm:p-8 h-full overflow-hidden">
-                  {/* Animated Border */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-0 rounded-2xl border border-slate-600/50"></div>
-                  </div>
-
-                  <div className="relative z-10">
-                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 group-hover:text-slate-100 transition-colors duration-300">
-                      {feature.title}
-                    </h4>
-                    <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
-                      {feature.description}
-                    </p>
-
-                    {/* Subtle Arrow */}
+          {/* First Row: 65% - 35% */}
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+            <motion.div
+              className="lg:w-[65%]"
+              variants={cardVariants}
+              whileHover={{ 
+                y: -4,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+            >
+              <div className="relative bg-[#101010] backdrop-blur-sm rounded-2xl p-6 sm:p-8 h-full overflow-hidden transition-all duration-300">
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-slate-800/50 flex items-center justify-center text-2xl mb-4">
+                      {allFeatures[0].icon}
+                    </div>
                     <motion.div 
-                      className="absolute top-6 sm:top-8 right-6 sm:right-8 text-slate-600 group-hover:text-slate-400 transition-colors duration-300"
+                      className="text-slate-600 group-hover:text-slate-400 transition-colors duration-300"
                       initial={{ x: 0, opacity: 0.7 }}
                       whileHover={{ x: 4, opacity: 1 }}
                     >
@@ -175,54 +171,69 @@ const Features = () => {
                       </svg>
                     </motion.div>
                   </div>
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                    {allFeatures[0].title}
+                  </h4>
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                    {allFeatures[0].description}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="lg:w-[35%]"
+              variants={cardVariants}
+              whileHover={{ 
+                y: -4,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+            >
+              <div className="relative bg-[#101010] backdrop-blur-sm rounded-2xl p-6 sm:p-8 h-full overflow-hidden transition-all duration-300">
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-slate-800/50 flex items-center justify-center text-2xl mb-4">
+                      {allFeatures[1].icon}
+                    </div>
+                    <motion.div 
+                      className="text-slate-600 group-hover:text-slate-400 transition-colors duration-300"
+                      initial={{ x: 0, opacity: 0.7 }}
+                      whileHover={{ x: 4, opacity: 1 }}
+                    >
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </motion.div>
+                  </div>
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                    {allFeatures[1].title}
+                  </h4>
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                    {allFeatures[1].description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
 
-        {/* For HR & Leadership Section */}
-        <motion.div 
-          variants={itemVariants}
-        >
-          <motion.div 
-            className="flex items-center justify-center mb-12"
-            variants={itemVariants}
-          >
-            <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent flex-1 max-w-16 sm:max-w-20"></div>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mx-4 sm:mx-6 text-center"
-                style={{ fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif' }}>For HR & Leadership</h3>
-            <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent flex-1 max-w-16 sm:max-w-20"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {hrFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                className="group relative"
-                variants={cardVariants}
-                whileHover={{ 
-                  y: -8,
-                  transition: { duration: 0.3, ease: "easeOut" }
-                }}
-              >
-                <div className="relative bg-[#0A0A0C] backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 sm:p-8 h-full overflow-hidden">
-                  {/* Animated Border */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-0 rounded-2xl border border-slate-600/50"></div>
-                  </div>
-
-                  <div className="relative z-10">
-                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-4 sm:mb-6 group-hover:text-slate-100 transition-colors duration-300">
-                      {feature.title}
-                    </h4>
-                    <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
-                      {feature.description}
-                    </p>
-
-                    {/* Subtle Arrow */}
+          {/* Second Row: 35% - 65% */}
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+            <motion.div
+              className="lg:w-[35%]"
+              variants={cardVariants}
+              whileHover={{ 
+                y: -4,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+            >
+              <div className="relative bg-[#101010] backdrop-blur-sm rounded-2xl p-6 sm:p-8 h-full overflow-hidden transition-all duration-300">
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-slate-800/50 flex items-center justify-center text-2xl mb-4">
+                      {allFeatures[2].icon}
+                    </div>
                     <motion.div 
-                      className="absolute top-6 sm:top-8 right-6 sm:right-8 text-slate-600 group-hover:text-slate-400 transition-colors duration-300"
+                      className="text-slate-600 group-hover:text-slate-400 transition-colors duration-300"
                       initial={{ x: 0, opacity: 0.7 }}
                       whileHover={{ x: 4, opacity: 1 }}
                     >
@@ -231,9 +242,49 @@ const Features = () => {
                       </svg>
                     </motion.div>
                   </div>
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                    {allFeatures[2].title}
+                  </h4>
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                    {allFeatures[2].description}
+                  </p>
                 </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="lg:w-[65%]"
+              variants={cardVariants}
+              whileHover={{ 
+                y: -4,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+            >
+              <div className="relative bg-[#101010] backdrop-blur-sm rounded-2xl p-6 sm:p-8 h-full overflow-hidden transition-all duration-300">
+                <div className="relative z-10">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-slate-800/50 flex items-center justify-center text-2xl mb-4">
+                      {allFeatures[3].icon}
+                    </div>
+                    <motion.div 
+                      className="text-slate-600 group-hover:text-slate-400 transition-colors duration-300"
+                      initial={{ x: 0, opacity: 0.7 }}
+                      whileHover={{ x: 4, opacity: 1 }}
+                    >
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </motion.div>
+                  </div>
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                    {allFeatures[3].title}
+                  </h4>
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                    {allFeatures[3].description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>
