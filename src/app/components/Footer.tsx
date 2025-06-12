@@ -31,41 +31,36 @@ const Footer = () => {
     {
       title: "Platform",
       links: [
-        "AI Assessments",
-        "Learning Roadmaps",
-        "Analytics Dashboard",
-        "Strategic Insights",
-        "Virtual CHRO"
+        { name: "AI Assessments", href: "/#features" },
+        { name: "Learning Roadmaps", href: "/#features" },
+        { name: "Analytics Dashboard", href: "/#features" },
+        { name: "Strategic Insights", href: "/#features" },
+        { name: "Virtual CHRO", href: "/athena" }
       ]
     },
     {
       title: "Resources",
       links: [
-        "Documentation",
-        "API Reference",
-        "Case Studies",
-        "Webinars",
-        "Blog"
+        { name: "Documentation", href: "#" },
+        { name: "Case Studies", href: "/case-studies", highlight: true }
       ]
     },
     {
       title: "Company",
       links: [
-        "About Us",
-        "Careers",
-        "News",
-        "Press",
-        "Contact"
+        { name: "About Us", href: "/#about" },
+        { name: "Careers", href: "/career", highlight: true },
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Contact", href: "/#contact" }
       ]
     },
     {
-      title: "Legal",
+      title: "Founder",
       links: [
-        "Privacy Policy",
-        "Terms of Service",
-        "Cookie Policy",
-        "GDPR",
-        "Security"
+        { name: "LinkedIn", href: "https://www.linkedin.com/in/aditya-kamble-entrepreneur", highlight: true },
+        { name: "Instagram", href: "https://www.instagram.com/thegodofcomputers/" },
+        { name: "Twitter", href: "https://x.com/adityaknotfound" },
+        { name: "Personal Website", href: "https://thegodofcomputers.com/" }
       ]
     }
   ];
@@ -135,8 +130,8 @@ const Footer = () => {
             variants={itemVariants}
           >
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-sm">A</span>
+              <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">A</span>
               </div>
               <span className="text-white font-semibold text-lg">Adivirtus AI</span>
             </div>
@@ -156,10 +151,14 @@ const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a 
-                      href="#" 
-                      className="text-slate-400 hover:text-white transition-colors duration-200 text-sm"
+                      href={link.href} 
+                      className={`text-sm transition-colors duration-200 ${
+                        link.highlight 
+                          ? 'text-blue-400 hover:text-blue-300' 
+                          : 'text-slate-400 hover:text-white'
+                      }`}
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}

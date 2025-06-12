@@ -59,11 +59,23 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <button 
               onClick={() => handleNavClick('#contact')}
-              className="text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium px-4 py-2 border border-white/20 rounded-lg hover:border-blue-400/40"
+              className="group relative px-4 py-2 bg-transparent text-white font-medium rounded-lg transition-all duration-300 overflow-hidden"
             >
-              Contact Us
+              {/* Animated gradient border */}
+              <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/50 to-cyan-400/50 opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+              
+              {/* Inner background */}
+              <span className="absolute inset-[1px] rounded-lg bg-black/80 backdrop-blur-sm"></span>
+              
+              {/* Button content */}
+              <span className="relative z-10 text-sm flex items-center space-x-2">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <span>Contact Us</span>
+              </span>
             </button>
-            <button className="bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-200 text-sm font-medium px-4 py-2 rounded-lg">
+            <button className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 text-sm font-medium px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
               Demo
             </button>
           </div>
@@ -108,11 +120,18 @@ export default function Header() {
               <div className="border-t border-white/20 pt-3 mt-3 space-y-2">
                 <button 
                   onClick={() => handleNavClick('#contact')}
-                  className="w-full text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium px-3 py-2 border border-white/20 rounded-lg hover:border-blue-400/40"
+                  className="w-full relative bg-transparent text-white font-medium px-3 py-2 rounded-lg transition-all duration-300 overflow-hidden group"
                 >
-                  Contact Us
+                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/30 to-cyan-400/30"></span>
+                  <span className="absolute inset-[1px] rounded-lg bg-black/80"></span>
+                  <span className="relative z-10 text-sm flex items-center justify-center space-x-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    <span>Contact Us</span>
+                  </span>
                 </button>
-                <button className="w-full bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-200 text-sm font-medium px-3 py-2 rounded-lg">
+                <button className="w-full bg-gradient-to-r from-blue-400 to-cyan-400 text-white hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 text-sm font-medium px-3 py-2 rounded-lg shadow-lg">
                   Demo
                 </button>
               </div>

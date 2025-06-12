@@ -92,7 +92,7 @@ const AthenaPage = () => {
                 variants={leftVariants}
               >
                 <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-sm shadow-sky-400/50"></div>
-                <span className="text-sm font-semibold text-white" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>VIRTUAL CHRO</span>
+                <span className="text-sm font-semibold text-white" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>AI L&D ADVISOR</span>
               </motion.div>
 
               {/* Main Title */}
@@ -113,16 +113,16 @@ const AthenaPage = () => {
                 variants={leftVariants}
                 style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
               >
-                Your AI Chief Human Resources Officer
+                Your AI Learning & Development Advisor
               </motion.h2>
 
               {/* Description */}
               <motion.p 
                 className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-2xl px-4 lg:px-0"
                 variants={leftVariants}
-                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
+                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
               >
-                Chat or video call with your AI Chief Human Resources Officer anytime. Get instant strategic advice, training recommendations, and answers to complex HR questions - like having an expert CHRO available 24/7.
+                Chat or video call with your AI Learning & Development Advisor anytime. Get instant guidance on skill development, training strategies, and workforce growth - like having an expert L&D consultant available 24/7 to help your team reach their potential.
               </motion.p>
 
               {/* Features List */}
@@ -131,11 +131,11 @@ const AthenaPage = () => {
                 variants={leftVariants}
               >
                 {[
-                  "24/7 availability for strategic HR guidance",
-                  "Instant training and development recommendations",
-                  "Complex HR question resolution",
-                  "Data-driven workforce insights",
-                  "Personalized leadership coaching"
+                  "Instant Skill Gap Insights",
+                  "Strategic L&D Planning",
+                  "Training Needs Identification (TNI)",
+                  "Training Planning",
+                  "24/7 Expert L&D Consultation"
                 ].map((feature, index) => (
                   <motion.div 
                     key={index}
@@ -156,7 +156,7 @@ const AthenaPage = () => {
                 variants={leftVariants}
               >
                 <motion.button
-                  className="group px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden max-w-xs sm:max-w-none mx-auto sm:mx-0"
+                  className="group px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold rounded-full shadow-xl relative overflow-hidden max-w-xs sm:max-w-none mx-auto sm:mx-0"
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
@@ -165,7 +165,7 @@ const AthenaPage = () => {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-300 to-cyan-300 opacity-0 group-hover:opacity-100"
                     transition={{ duration: 0.3 }}
                   />
                   <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
@@ -191,7 +191,7 @@ const AthenaPage = () => {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   {/* Animated gradient border */}
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/80 to-blue-400/80 animate-pulse-slow opacity-80"></span>
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/80 to-cyan-400/80 animate-pulse-slow opacity-80"></span>
                   
                   {/* Inner background with blur */}
                   <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
@@ -225,7 +225,7 @@ const AthenaPage = () => {
                   
                   {/* Hover effect */}
                   <motion.span
-                    className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/30 to-blue-400/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                    className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 to-cyan-400/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}

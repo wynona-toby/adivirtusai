@@ -45,44 +45,61 @@ const Pricing = () => {
 
   const pricingPlans = [
     {
-      name: "Basic",
+      name: "INITIUM",
+      subtitle: "(Basic)",
       price: "$99",
-      description: "Best for small business owners, startups who needs AI-powered skill assessment for their team.",
+      description: "Perfect for small businesses and startups beginning their AI-powered workforce transformation journey.",
       features: [
-        "AI Skill Assessments",
-        "Basic Analytics Dashboard",
-        "Up to 50 employees",
-        "Email Support"
+        "Up to 150 employees",
+        "AI-powered adaptive skill assessments",
+        "Personalized learning roadmaps",
+        "Real-time skill gap analysis",
+        "Team competency dashboards",
+        "Basic integrations (HRIS, Slack, Teams)",
+        "Performance tracking & progress reports",
+        "Mobile access",
+        "Standard email support",
+        "1-week free trial"
       ],
       isPopular: false,
       buttonStyle: "secondary"
     },
     {
-      name: "Premium",
+      name: "PROGRESSUS",
+      subtitle: "(Pro)",
       price: "$199",
-      description: "Best for medium business owners who need comprehensive AI-powered workforce development.",
+      description: "Ideal for growing companies ready to scale their workforce development with advanced analytics and insights.",
       features: [
-        "Advanced AI Assessments",
-        "Personalized Learning Roadmaps",
-        "Real-time Analytics Dashboard",
-        "Up to 200 employees",
-        "Priority Support",
-        "Strategic Insights Engine"
+        "Everything in INITIUM, plus:",
+        "Up to 300 employees",
+        "Advanced analytics & benchmarking",
+        "ROI measurement tools",
+        "Priority integrations (15+ platforms)",
+        "Custom learning path templates",
+        "Manager insights dashboard",
+        "Automated progress nudges",
+        "Priority support (24-48hr response)",
+        "Quarterly business impact reports"
       ],
       isPopular: true,
       buttonStyle: "primary"
     },
     {
-      name: "Enterprise",
-      price: "$399",
-      description: "Best for large companies who need complete AI-powered workforce transformation.",
+      name: "APEX",
+      subtitle: "(Enterprise)",
+      price: "Custom",
+      description: "Comprehensive solution for large enterprises requiring maximum customization and dedicated support.",
       features: [
-        "Full AI Suite Access",
-        "Virtual CHRO AI Agent",
+        "Everything in PROGRESSUS, plus:",
         "Unlimited employees",
-        "Custom Integrations",
-        "24/7 Dedicated Support",
-        "Advanced Analytics & Reporting"
+        "White-label customization",
+        "Custom integrations & API access",
+        "Dedicated customer success manager",
+        "Advanced security & compliance",
+        "Custom reporting & data exports",
+        "On-site training & implementation",
+        "24/7 premium support",
+        "Custom pricing based on requirements"
       ],
       isPopular: false,
       buttonStyle: "secondary"
@@ -152,7 +169,7 @@ const Pricing = () => {
               {/* Popular Badge */}
               {plan.isPopular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                  <div className="bg-gradient-to-r from-pink-400 to-rose-500 text-white px-4 py-1 rounded-full text-xs font-semibold">
                     Most Popular
                   </div>
                 </div>
@@ -160,19 +177,26 @@ const Pricing = () => {
               
               <div className={`relative overflow-hidden rounded-3xl p-6 sm:p-8 h-full transition-all duration-300 ${
                 plan.isPopular 
-                  ? 'bg-gradient-to-b from-blue-500/10 to-blue-600/5 border border-blue-500/30' 
+                  ? 'bg-gradient-to-b from-pink-400/10 to-rose-500/5 border border-pink-400/30' 
                   : 'bg-[#101010] border border-slate-700/30'
               }`}>
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-1 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {plan.name}
                   </h3>
+                  {plan.subtitle && (
+                    <p className="text-sm text-slate-400 mb-3" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
+                      {plan.subtitle}
+                    </p>
+                  )}
                   
                   <div className="mb-6">
                     <span className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                       {plan.price}
                     </span>
-                    <span className="text-slate-400 text-lg ml-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>/month</span>
+                    <span className="text-slate-400 text-lg ml-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
+                      {plan.price === "Custom" ? "" : "/employee/year"}
+                    </span>
                   </div>
                   
                   <p className="text-sm sm:text-base leading-relaxed mb-8 text-slate-400 min-h-[3rem]" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
@@ -181,7 +205,7 @@ const Pricing = () => {
 
                   {plan.buttonStyle === "primary" ? (
                     <motion.button
-                      className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 focus:ring-blue-500 focus:ring-offset-slate-900 shadow-lg hover:shadow-xl"
+                      className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 bg-gradient-to-r from-pink-400 to-rose-500 text-white hover:from-pink-500 hover:to-rose-600 focus:ring-pink-400 focus:ring-offset-slate-900 shadow-lg hover:shadow-xl"
                       whileHover={{ scale: 1.02, y: -2 }}
                       whileTap={{ scale: 0.98 }}
                       style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
