@@ -108,12 +108,12 @@ const About = () => {
               {tags.map((tag, index) => (
                 <motion.div
                   key={index}
-                  className="px-6 py-3 bg-[#101010] border border-blue-500/30 rounded-full hover:border-blue-400/50 transition-all duration-300"
+                  className="px-6 py-3 bg-[#101010] border border-pink-500/30 rounded-full hover:border-rose-400/50 transition-all duration-300"
                   variants={tagVariants}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span className="text-blue-400 font-medium text-sm sm:text-base" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>{tag}</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500 font-medium text-sm sm:text-base" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>{tag}</span>
                 </motion.div>
               ))}
             </motion.div>
