@@ -135,23 +135,24 @@ const Security = () => {
             whileHover={{ scale: 1.05, borderColor: "rgba(59, 130, 246, 0.5)" }}
           >
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>ENTERPRISE READY</span>
+            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>ENTERPRISE READY</span>
           </motion.div>
 
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[0.9] tracking-tight mb-6"
             variants={itemVariants}
             style={{ 
-              fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-              fontWeight: 700
+              fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+              fontWeight: 600
             }}
           >
-            Engineered with <span className="text-blue-400">ambition</span>
+            Engineered with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">ambition</span>
           </motion.h1>
 
           <motion.p 
             className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl"
             variants={itemVariants}
+            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
             Adivirtus AI is built for ambitious AI projects. You can integrate it with your existing tech stack and scale it as you grow. 
             We've implemented sophisticated and top-notch security measures and protocols to protect your data.
@@ -171,8 +172,9 @@ const Security = () => {
             {/* Left Content */}
             <div className="space-y-6">
               <motion.h2 
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight"
                 variants={itemVariants}
+                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
               >
                 Enterprise-grade security
                 <motion.span 
@@ -186,14 +188,14 @@ const Security = () => {
 
               <div className="space-y-6">
                 <motion.div variants={itemVariants}>
-                  <h3 className="text-lg font-semibold text-white mb-2">Enterprise-grade and battle-tested security</h3>
-                  <p className="text-slate-400 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-white mb-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>Enterprise-grade and battle-tested security</h3>
+                  <p className="text-slate-400 leading-relaxed" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     measures and protocols to protect your data.
                   </p>
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-slate-400 leading-relaxed" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     All our systems are built with security in mind and are constantly monitored and audited.
                   </p>
                 </motion.div>

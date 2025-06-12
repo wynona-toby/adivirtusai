@@ -122,19 +122,20 @@ const Features = () => {
           </motion.div>
 
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.85] tracking-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[0.85] tracking-tight mb-6"
             variants={itemVariants}
             style={{ 
-              fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-              fontWeight: 700
+              fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+              fontWeight: 600
             }}
           >
-            Built for <span className="text-blue-400">Everyone</span>
+            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Everyone</span>
           </motion.h2>
 
           <motion.p 
             className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal"
             variants={itemVariants}
+            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
             From individual learners to enterprise teams, our AI-powered platform adapts to your needs
           </motion.p>
@@ -171,10 +172,12 @@ const Features = () => {
                       </svg>
                     </motion.div>
                   </div>
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300"
+                      style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {allFeatures[0].title}
                   </h4>
-                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
+                     style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     {allFeatures[0].description}
                   </p>
                 </div>
@@ -205,10 +208,12 @@ const Features = () => {
                       </svg>
                     </motion.div>
                   </div>
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300"
+                      style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {allFeatures[1].title}
                   </h4>
-                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
+                     style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     {allFeatures[1].description}
                   </p>
                 </div>
@@ -242,10 +247,12 @@ const Features = () => {
                       </svg>
                     </motion.div>
                   </div>
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300"
+                      style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {allFeatures[2].title}
                   </h4>
-                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
+                     style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     {allFeatures[2].description}
                   </p>
                 </div>
@@ -276,10 +283,12 @@ const Features = () => {
                       </svg>
                     </motion.div>
                   </div>
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300"
+                      style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {allFeatures[3].title}
                   </h4>
-                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300">
+                  <p className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
+                     style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     {allFeatures[3].description}
                   </p>
                 </div>

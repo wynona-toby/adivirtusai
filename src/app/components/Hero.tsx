@@ -67,11 +67,11 @@ export default function Hero() {
 
           {/* Main Headline */}
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[0.85] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white leading-[0.85] tracking-tight"
             variants={itemVariants}
             style={{ 
-              fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-              fontWeight: 700
+              fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+              fontWeight: 600
             }}
           >
             <motion.span
@@ -96,6 +96,7 @@ export default function Hero() {
           <motion.p 
             className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal"
             variants={itemVariants}
+            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
             Adaptive skill assessments, personalized learning roadmaps, and real-time analytics - all powered by autonomous AI agents
           </motion.p>
@@ -104,6 +105,7 @@ export default function Hero() {
           <motion.p 
             className="text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-light"
             variants={itemVariants}
+            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
           >
             Experience the future of corporate training where intelligent agents work continuously to identify skill gaps, create personalized learning paths, and optimize team performance.
           </motion.p>
@@ -145,20 +147,51 @@ export default function Hero() {
             </motion.button>
             
             <motion.button
-              className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm border-2 border-slate-600/50 text-slate-200 font-semibold rounded-full hover:border-blue-400/50 relative overflow-hidden w-full sm:w-auto"
+              className="group px-6 py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden w-full sm:w-auto flex items-center justify-center"
               whileHover={{ 
                 scale: 1.05,
-                backgroundColor: "rgba(51, 65, 85, 0.7)",
-                borderColor: "rgba(59, 130, 246, 0.6)"
+                y: -3
               }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-500/10 opacity-0 group-hover:opacity-100 rounded-full"
+              {/* Animated gradient border */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/80 to-blue-400/80 animate-pulse-slow opacity-80"></span>
+              
+              {/* Inner background with blur */}
+              <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
+              
+              {/* Button content */}
+              <span className="relative z-10 flex items-center justify-center space-x-2">
+                <svg 
+                  className="w-5 h-5 text-blue-300" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" 
+                  />
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                  />
+                </svg>
+                <span className="text-blue-100">View Demo</span>
+              </span>
+              
+              {/* Hover effect */}
+              <motion.span
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/30 to-blue-400/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               />
-              <span className="relative z-10">View Demo</span>
             </motion.button>
           </motion.div>
 

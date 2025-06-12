@@ -108,23 +108,24 @@ const Pricing = () => {
             variants={itemVariants}
           >
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>FLEXIBLE PRICING</span>
+            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>FLEXIBLE PRICING</span>
           </motion.div>
 
           <motion.h2 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[0.9] tracking-tight mb-4 sm:mb-6"
             variants={itemVariants}
             style={{ 
-              fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-              fontWeight: 700
+              fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+              fontWeight: 600
             }}
           >
-            Make the wise decision for your <span className="text-blue-400">business</span>
+            Make the wise decision for your <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">business</span>
           </motion.h2>
 
           <motion.p 
             className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto"
             variants={itemVariants}
+            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
             Choose from our affordable 3 packages designed to scale with your workforce needs
           </motion.p>
@@ -147,18 +148,18 @@ const Pricing = () => {
             >
               <div className="relative overflow-hidden rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 bg-[#101010]">
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {plan.name}
                   </h3>
                   
                   <div className="mb-6">
-                    <span className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+                    <span className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                       {plan.price}
                     </span>
-                    <span className="text-slate-400 text-lg ml-2">/month</span>
+                    <span className="text-slate-400 text-lg ml-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>/month</span>
                   </div>
                   
-                  <p className="text-sm sm:text-base leading-relaxed mb-8 text-slate-400 min-h-[3rem]">
+                  <p className="text-sm sm:text-base leading-relaxed mb-8 text-slate-400 min-h-[3rem]" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                     {plan.description}
                   </p>
 
@@ -166,17 +167,18 @@ const Pricing = () => {
                     className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 border-2 border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500 focus:ring-slate-500 focus:ring-offset-slate-900"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
                   >
                     Get Started
                   </motion.button>
 
-                  <p className="text-base font-semibold mb-4 text-white">
+                  <p className="text-base font-semibold mb-4 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     What's included:
                   </p>
                   
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-sm sm:text-base text-slate-300">
+                      <li key={featureIndex} className="flex items-start text-sm sm:text-base text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
                         <svg className="w-5 h-5 mr-3 mt-0.5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>

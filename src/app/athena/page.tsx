@@ -97,20 +97,21 @@ const AthenaPage = () => {
 
               {/* Main Title */}
               <motion.h1 
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.85] tracking-tight"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[0.85] tracking-tight"
                 variants={leftVariants}
                 style={{ 
-                  fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-                  fontWeight: 700
+                  fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+                  fontWeight: 600
                 }}
               >
-                Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Athena</span>
+                Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Athena</span>
               </motion.h1>
 
               {/* Subtitle */}
               <motion.h2 
                 className="text-xl sm:text-2xl lg:text-3xl text-slate-300 font-medium"
                 variants={leftVariants}
+                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
               >
                 Your AI Chief Human Resources Officer
               </motion.h2>
@@ -119,6 +120,7 @@ const AthenaPage = () => {
               <motion.p 
                 className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-2xl"
                 variants={leftVariants}
+                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
               >
                 Chat or video call with your AI Chief Human Resources Officer anytime. Get instant strategic advice, training recommendations, and answers to complex HR questions - like having an expert CHRO available 24/7.
               </motion.p>
@@ -154,16 +156,16 @@ const AthenaPage = () => {
                 variants={leftVariants}
               >
                 <motion.button
-                  className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-full shadow-xl relative overflow-hidden"
+                  className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden"
                   whileHover={{ 
                     scale: 1.05,
-                    boxShadow: "0 25px 50px rgba(139, 92, 246, 0.4)"
+                    boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
                   }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 group-hover:opacity-100"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100"
                     transition={{ duration: 0.3 }}
                   />
                   <span className="relative z-10 flex items-center justify-center">
@@ -179,16 +181,51 @@ const AthenaPage = () => {
                 </motion.button>
                 
                 <motion.button
-                  className="group px-8 py-4 bg-slate-800/50 backdrop-blur-sm border-2 border-slate-600/50 text-slate-200 font-semibold rounded-full hover:border-slate-400/50 relative overflow-hidden"
+                  className="group px-6 py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden w-full sm:w-auto flex items-center justify-center"
                   whileHover={{ 
                     scale: 1.05,
-                    backgroundColor: "rgba(51, 65, 85, 0.7)",
-                    borderColor: "rgba(148, 163, 184, 0.6)"
+                    y: -3
                   }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  <span className="relative z-10">Video Call Demo</span>
+                  {/* Animated gradient border */}
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/80 to-blue-400/80 animate-pulse-slow opacity-80"></span>
+                  
+                  {/* Inner background with blur */}
+                  <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
+                  
+                  {/* Button content */}
+                  <span className="relative z-10 flex items-center justify-center space-x-2">
+                    <svg 
+                      className="w-5 h-5 text-blue-300" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" 
+                      />
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
+                      />
+                    </svg>
+                    <span className="text-blue-100">Video Call Demo</span>
+                  </span>
+                  
+                  {/* Hover effect */}
+                  <motion.span
+                    className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/30 to-blue-400/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -209,7 +246,7 @@ const AthenaPage = () => {
                   <Orb
                     hoverIntensity={0.5}
                     rotateOnHover={true}
-                    hue={280} // Purple-blue hue to match the theme
+                    hue={230}
                     forceHoverState={false}
                   />
                   
@@ -226,12 +263,12 @@ const AthenaPage = () => {
                     <span 
                       className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
                       style={{ 
-                        fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-                        fontWeight: 700,
-                        textShadow: "0 0 20px rgba(139, 92, 246, 0.5), 0 0 40px rgba(139, 92, 246, 0.3)"
+                        fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
+                        fontWeight: 600,
+                        textShadow: "0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)"
                       }}
                     >
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                         Athena
                       </span>
                     </span>
