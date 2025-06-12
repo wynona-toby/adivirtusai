@@ -54,13 +54,16 @@ export default function Hero() {
         <motion.div className="space-y-8 lg:space-y-10" variants={itemVariants}>
           
           {/* Status Indicator */}
-          <motion.div 
-            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto"
+          <motion.button 
+            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto hover:border-blue-400/50 transition-all duration-300 cursor-pointer"
             variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => window.location.href = '/act'}
           >
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>AI AGENTS ACTIVE</span>
-          </motion.div>
+            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>ACT 3</span>
+          </motion.button>
 
           {/* Main Headline */}
           <motion.h1 

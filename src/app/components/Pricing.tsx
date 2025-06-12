@@ -145,21 +145,8 @@ const Pricing = () => {
                 transition: { duration: 0.3, ease: "easeOut" }
               }}
             >
-              <div className={`relative overflow-hidden rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 ${
-                plan.isPopular 
-                  ? 'bg-[#101010] border-2 border-blue-500' 
-                  : 'bg-[#101010] border border-slate-700/50 hover:border-slate-600/50'
-              }`}>
-                {/* Popular Badge */}
-                {plan.isPopular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-                    <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-                      MOST POPULAR
-                    </div>
-                  </div>
-                )}
-
-                <div className="relative z-10 pt-2">
+              <div className="relative overflow-hidden rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 bg-[#101010]">
+                <div className="relative z-10">
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white">
                     {plan.name}
                   </h3>
@@ -176,11 +163,7 @@ const Pricing = () => {
                   </p>
 
                   <motion.button
-                    className={`w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 ${
-                      plan.isPopular
-                        ? 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500 focus:ring-offset-slate-900'
-                        : 'border-2 border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500 focus:ring-slate-500 focus:ring-offset-slate-900'
-                    }`}
+                    className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 border-2 border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500 focus:ring-slate-500 focus:ring-offset-slate-900"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
