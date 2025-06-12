@@ -62,14 +62,14 @@ const AthenaPage = () => {
   };
 
   return (
-    <section id="athena" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden">
+    <section id="athena" className="relative min-h-screen bg-black overflow-hidden">
       {/* Hidden audio element */}
       <audio ref={audioRef} preload="auto">
         <source src="/Athena.mp3" type="audio/mpeg" />
       </audio>
 
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       <motion.div 
         ref={ref}
@@ -88,28 +88,28 @@ const AthenaPage = () => {
             >
               {/* Header Badge */}
               <motion.div 
-                className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg"
+                className="inline-flex items-center space-x-3 px-4 py-2 bg-sky-500/30 backdrop-blur-sm border border-sky-500/50 rounded-full shadow-lg"
                 variants={leftVariants}
               >
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse shadow-sm shadow-purple-400/50"></div>
-                <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>VIRTUAL CHRO</span>
+                <div className="w-2 h-2 bg-sky-400 rounded-full animate-pulse shadow-sm shadow-sky-400/50"></div>
+                <span className="text-sm font-semibold text-white" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>VIRTUAL CHRO</span>
               </motion.div>
 
               {/* Main Title */}
               <motion.h1 
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[0.85] tracking-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[0.9] tracking-tight"
                 variants={leftVariants}
                 style={{ 
                   fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 600
                 }}
               >
-                Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Athena</span>
+                Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Athena</span>
               </motion.h1>
 
               {/* Subtitle */}
               <motion.h2 
-                className="text-xl sm:text-2xl lg:text-3xl text-slate-300 font-medium"
+                className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-300 font-medium"
                 variants={leftVariants}
                 style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
               >
@@ -118,7 +118,7 @@ const AthenaPage = () => {
 
               {/* Description */}
               <motion.p 
-                className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-2xl"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-2xl px-4 lg:px-0"
                 variants={leftVariants}
                 style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
               >
@@ -156,7 +156,7 @@ const AthenaPage = () => {
                 variants={leftVariants}
               >
                 <motion.button
-                  className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden"
+                  className="group px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden max-w-xs sm:max-w-none mx-auto sm:mx-0"
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
@@ -168,8 +168,9 @@ const AthenaPage = () => {
                     className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100"
                     transition={{ duration: 0.3 }}
                   />
-                  <span className="relative z-10 flex items-center justify-center">
-                    Start Chat with Athena
+                  <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
+                    <span className="hidden sm:inline">Start Chat with Athena</span>
+                    <span className="sm:hidden">Chat with Athena</span>
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{ x: [0, 4, 0] }}
@@ -181,7 +182,7 @@ const AthenaPage = () => {
                 </motion.button>
                 
                 <motion.button
-                  className="group px-6 py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden w-full sm:w-auto flex items-center justify-center"
+                  className="group px-4 sm:px-6 py-3 sm:py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden max-w-xs sm:max-w-none mx-auto sm:mx-0 flex items-center justify-center"
                   whileHover={{ 
                     scale: 1.05,
                     y: -3
@@ -198,7 +199,7 @@ const AthenaPage = () => {
                   {/* Button content */}
                   <span className="relative z-10 flex items-center justify-center space-x-2">
                     <svg 
-                      className="w-5 h-5 text-blue-300" 
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-blue-300" 
                       fill="none" 
                       viewBox="0 0 24 24" 
                       stroke="currentColor"
@@ -216,7 +217,10 @@ const AthenaPage = () => {
                         d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
                       />
                     </svg>
-                    <span className="text-blue-100">Video Call Demo</span>
+                    <span className="text-blue-100 text-sm sm:text-base">
+                      <span className="hidden sm:inline">Video Call Demo</span>
+                      <span className="sm:hidden">Demo</span>
+                    </span>
                   </span>
                   
                   {/* Hover effect */}
@@ -239,14 +243,15 @@ const AthenaPage = () => {
                 {/* Orb Container with Hover Wrapper */}
                 <div 
                   className="relative max-w-lg mx-auto cursor-pointer"
-                  style={{ width: '100%', height: '600px' }}
+                  style={{ width: '100%', height: '400px' }}
+                  data-responsive-height="sm:h-96 md:h-[500px] lg:h-[600px]"
                   onMouseEnter={handleOrbHover}
                   onMouseLeave={handleOrbLeave}
                 >
                   <Orb
                     hoverIntensity={0.5}
                     rotateOnHover={true}
-                    hue={230}
+                    hue={0}
                     forceHoverState={false}
                   />
                   

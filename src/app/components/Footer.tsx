@@ -116,9 +116,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#0A0A0B] border-t border-slate-800/50" suppressHydrationWarning={true}>
+    <footer className="relative bg-black border-t border-slate-800/50" suppressHydrationWarning={true}>
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-30"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       <motion.div 
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
@@ -128,10 +128,10 @@ const Footer = () => {
         viewport={{ once: true, margin: "-50px" }}
       >
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-12 mb-12">
           {/* Logo Section */}
           <motion.div 
-            className="lg:col-span-1"
+            className="sm:col-span-2 lg:col-span-1"
             variants={itemVariants}
           >
             <div className="flex items-center space-x-2 mb-6">
@@ -146,7 +146,7 @@ const Footer = () => {
           {footerSections.map((section, index) => (
             <motion.div 
               key={section.title}
-              className={section.title === "Subscribe" ? "lg:col-span-1" : "lg:col-span-1"}
+              className="lg:col-span-1"
               variants={itemVariants}
             >
               <h3 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">
@@ -169,7 +169,7 @@ const Footer = () => {
 
           {/* Subscribe Section */}
           <motion.div 
-            className="lg:col-span-1"
+            className="sm:col-span-2 lg:col-span-1"
             variants={itemVariants}
           >
             <h3 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">
@@ -182,7 +182,7 @@ const Footer = () => {
             </ul>
             
             {/* Email Subscription */}
-            <div className="space-y-3">
+            <div className="space-y-3 max-w-sm">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -201,16 +201,16 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <motion.div 
-          className="border-t border-slate-800/50 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0"
+          className="border-t border-slate-800/50 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0"
           variants={itemVariants}
         >
           {/* Copyright */}
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-400 text-sm text-center sm:text-left">
             © 2025 Adivirtus AI, Mumbai, India
           </p>
 
           {/* Social Links */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-3 sm:space-x-4">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={social.name}

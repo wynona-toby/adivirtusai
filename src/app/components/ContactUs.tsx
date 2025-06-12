@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 export default function ContactUs() {
   return (
-    <section id="contact" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
+    <section id="contact" className="relative min-h-screen bg-black overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       {/* Content Overlay */}
       <div className="relative z-10 flex min-h-screen items-center justify-center">
-        <div className="mx-auto max-w-7xl px-1 sm:px-2 lg:px-3 py-12 sm:py-16 lg:py-20 text-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
           {/* Status Indicator */}
           <motion.div 
             className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto mb-8"
@@ -29,7 +29,7 @@ export default function ContactUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold leading-[0.85] tracking-tight"
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[0.9] tracking-tight"
                 style={{ 
                   fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 600
@@ -46,11 +46,11 @@ export default function ContactUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed font-normal"
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed font-normal px-4"
                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
               Unlock the future of corporate upskilling and learning with us
             </p>
-            <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-light"
+            <p className="text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-light px-4"
                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
               Ready to transform your workforce? Let's discuss how our agentic AI solutions can revolutionize your team's learning journey.
             </p>
@@ -58,22 +58,22 @@ export default function ContactUs() {
           
           {/* Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center max-w-lg mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <motion.button
-              className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto"
+              className="group px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden max-w-xs sm:max-w-none w-full sm:w-auto"
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
+                boxShadow: "0 25px 50px rgba(34, 197, 94, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-100"
                 transition={{ duration: 0.3 }}
               />
               <motion.div
@@ -82,7 +82,7 @@ export default function ContactUs() {
                 whileHover={{ scale: 1.5, opacity: 0.1 }}
                 transition={{ duration: 0.4 }}
               />
-              <span className="relative z-10 flex items-center justify-center">
+              <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
                 Contact Us
                 <motion.span
                   className="ml-2 inline-block"
@@ -95,7 +95,7 @@ export default function ContactUs() {
             </motion.button>
             
             <motion.button
-              className="group px-6 py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden w-full sm:w-auto flex items-center justify-center"
+              className="group px-4 sm:px-6 py-3 sm:py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden max-w-xs sm:max-w-none w-full sm:w-auto flex items-center justify-center"
               whileHover={{ 
                 scale: 1.05,
                 y: -3
@@ -104,7 +104,7 @@ export default function ContactUs() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               {/* Animated gradient border */}
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/80 to-blue-400/80 animate-pulse-slow opacity-80"></span>
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/80 to-emerald-400/80 animate-pulse-slow opacity-80"></span>
               
               {/* Inner background with blur */}
               <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
@@ -112,7 +112,7 @@ export default function ContactUs() {
               {/* Button content */}
               <span className="relative z-10 flex items-center justify-center space-x-2">
                 <svg 
-                  className="w-5 h-5 text-blue-300" 
+                  className="w-4 h-4 sm:w-5 sm:h-5 text-green-300" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
@@ -130,12 +130,12 @@ export default function ContactUs() {
                     d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
                   />
                 </svg>
-                <span className="text-blue-100">View Demo</span>
+                <span className="text-green-100 text-sm sm:text-base">View Demo</span>
               </span>
               
               {/* Hover effect */}
               <motion.span
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600/30 to-blue-400/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-green-600/30 to-emerald-400/30 z-0 shadow-[0_0_15px_rgba(34,197,94,0.5)]"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}

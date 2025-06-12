@@ -87,9 +87,9 @@ const Security = () => {
   };
 
   return (
-    <section id="security" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-12 lg:py-16">
+    <section id="security" className="relative min-h-screen bg-black overflow-hidden py-12 lg:py-16">
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       {/* Animated background particles */}
       <motion.div 
@@ -130,16 +130,16 @@ const Security = () => {
           variants={itemVariants}
         >
           <motion.div 
-            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mb-6"
+            className="inline-flex items-center space-x-3 px-4 py-2 bg-purple-500/30 backdrop-blur-sm border border-purple-500/50 rounded-full shadow-lg mb-6"
             variants={itemVariants}
-            whileHover={{ scale: 1.05, borderColor: "rgba(59, 130, 246, 0.5)" }}
+            whileHover={{ scale: 1.05, borderColor: "rgba(168, 85, 247, 0.5)" }}
           >
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>ENTERPRISE READY</span>
+            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse shadow-sm shadow-purple-400/50"></div>
+            <span className="text-sm font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>ENTERPRISE READY</span>
           </motion.div>
 
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[0.9] tracking-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[0.9] tracking-tight mb-6"
             variants={itemVariants}
             style={{ 
               fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -150,7 +150,7 @@ const Security = () => {
           </motion.h1>
 
           <motion.p 
-            className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl px-4 lg:px-0"
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
@@ -165,7 +165,7 @@ const Security = () => {
           variants={sectionVariants}
         >
           <div className="mb-8">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">SECURITY</span>
+            <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">SECURITY</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -233,7 +233,7 @@ const Security = () => {
           variants={sectionVariants}
         >
           <div className="mb-4">
-            <span className="text-sm font-semibold text-blue-400 uppercase tracking-wider">INTEGRATIONS</span>
+            <span className="text-sm font-semibold text-purple-400 uppercase tracking-wider">INTEGRATIONS</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">

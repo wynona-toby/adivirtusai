@@ -41,16 +41,16 @@ export default function Hero() {
   return (
     <motion.section 
       ref={ref}
-      className="relative min-h-screen bg-[#0A0A0B] overflow-hidden flex items-center justify-center"
+      className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center"
       variants={containerVariants}
       initial="hidden"
       animate={controls}
     >
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       {/* Main Content Container - Centered */}
-      <div className="relative z-10 max-w-7xl mx-auto px-1 sm:px-2 lg:px-3 py-12 sm:py-16 lg:py-20 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center">
         <motion.div className="space-y-8 lg:space-y-10" variants={itemVariants}>
           
           {/* Status Indicator */}
@@ -67,7 +67,7 @@ export default function Hero() {
 
           {/* Main Headline */}
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white leading-[0.85] tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[0.9] tracking-tight"
             variants={itemVariants}
             style={{ 
               fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -94,7 +94,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <motion.p 
-            className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal px-4"
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
@@ -103,20 +103,20 @@ export default function Hero() {
 
           {/* Supporting Text */}
           <motion.p 
-            className="text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-light"
+            className="text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto px-4"
             variants={itemVariants}
-            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
+            style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
             Experience the future of corporate training where intelligent agents work continuously to identify skill gaps, create personalized learning paths, and optimize team performance.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 pt-8 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-8 justify-center items-center max-w-lg mx-auto"
             variants={itemVariants}
           >
             <motion.button
-              className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto"
+              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none text-sm sm:text-base"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
@@ -147,7 +147,7 @@ export default function Hero() {
             </motion.button>
             
             <motion.button
-              className="group px-6 py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden w-full sm:w-auto flex items-center justify-center"
+              className="group px-5 sm:px-6 py-3 sm:py-4 bg-transparent text-white font-semibold rounded-full relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none flex items-center justify-center text-sm sm:text-base"
               whileHover={{ 
                 scale: 1.05,
                 y: -3
@@ -195,9 +195,9 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Optional: Feature highlights or stats */}
+          {/* Feature highlights or stats */}
           <motion.div 
-            className="pt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
+            className="pt-8 sm:pt-12 grid grid-cols-3 gap-4 sm:gap-8 max-w-md sm:max-w-2xl mx-auto px-4"
             variants={itemVariants}
           >
             <motion.div 
@@ -206,8 +206,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2 }}
             >
-              <div className="text-2xl lg:text-3xl font-bold text-white font-mono mb-2">23+</div>
-              <div className="text-sm text-slate-400">AI Agents</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-white font-mono mb-1 sm:mb-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>23+</div>
+              <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>AI Agents</div>
             </motion.div>
             
             <motion.div 
@@ -216,8 +216,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 }}
             >
-              <div className="text-2xl lg:text-3xl font-bold text-blue-400 font-mono mb-2">94%</div>
-              <div className="text-sm text-slate-400">Engagement Rate</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-blue-400 font-mono mb-1 sm:mb-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>94%</div>
+              <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>Engagement Rate</div>
             </motion.div>
             
             <motion.div 
@@ -226,8 +226,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6 }}
             >
-              <div className="text-2xl lg:text-3xl font-bold text-emerald-400 font-mono mb-2">+34%</div>
-              <div className="text-sm text-slate-400">ROI Increase</div>
+              <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-emerald-400 font-mono mb-1 sm:mb-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>+34%</div>
+              <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>ROI Increase</div>
             </motion.div>
           </motion.div>
         </motion.div>

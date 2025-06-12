@@ -48,7 +48,7 @@ const Features = () => {
       title: "AI-Driven Assessments & Skill Gap Analysis",
       description: "Discover your exact skill gaps in minutes with our adaptive AI assessments. Our intelligent system evaluates technical, soft, and cognitive skills to create a comprehensive skill profile, identifying precisely what you need to learn next.",
       tag: "AI Assessment",
-      tagColor: "bg-blue-500",
+      tagColor: "bg-blue-500/30",
       textColor: "text-blue-400",
       keywords: ["adaptive AI assessments", "intelligent system", "skill profile"]
     },
@@ -56,7 +56,7 @@ const Features = () => {
       title: "Personalized Learning Roadmaps",
       description: "Get a custom learning journey designed just for you. Our AI automatically curates the best content from across the web, sequences it perfectly for your learning style, and adapts the pace based on your progress and availability.",
       tag: "Smart Learning",
-      tagColor: "bg-emerald-500",
+      tagColor: "bg-emerald-500/30",
       textColor: "text-emerald-400",
       keywords: ["custom learning journey", "AI automatically curates", "learning style"]
     },
@@ -64,7 +64,7 @@ const Features = () => {
       title: "Real-Time HR Analytics Dashboard",
       description: "See your team's skill gaps, training progress, and business impact at a glance. Track ROI in real-time and get predictive insights on future skill needs to stay ahead of industry demands.",
       tag: "Analytics",
-      tagColor: "bg-purple-500",
+      tagColor: "bg-purple-500/30",
       textColor: "text-purple-400",
       keywords: ["real-time", "predictive insights", "business impact"]
     },
@@ -72,7 +72,7 @@ const Features = () => {
       title: "Strategic Insights Engine",
       description: "Visualize organizational competencies with interactive heatmaps, monitor training effectiveness, and receive automated reports that benchmark your team against industry standards.",
       tag: "Strategy",
-      tagColor: "bg-orange-500",
+      tagColor: "bg-orange-500/30",
       textColor: "text-orange-400",
       keywords: ["interactive heatmaps", "automated reports", "benchmark"]
     }
@@ -88,13 +88,13 @@ const Features = () => {
   };
 
   return (
-    <section id="features" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32" suppressHydrationWarning={true}>
+    <section id="features" className="relative min-h-screen bg-black overflow-hidden py-20 lg:py-32" suppressHydrationWarning={true}>
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       <motion.div 
         ref={ref}
-        className="relative z-10 max-w-7xl mx-auto px-1 sm:px-2 lg:px-3"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -105,15 +105,15 @@ const Features = () => {
           variants={itemVariants}
         >
           <motion.div 
-            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto mb-6"
+            className="inline-flex items-center space-x-3 px-4 py-2 bg-orange-500/30 backdrop-blur-sm border border-orange-500/50 rounded-full shadow-lg mx-auto mb-6"
             variants={itemVariants}
           >
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>INTELLIGENT FEATURES</span>
+            <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse shadow-sm shadow-orange-400/50"></div>
+            <span className="text-sm font-semibold text-white" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>INTELLIGENT FEATURES</span>
           </motion.div>
 
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[0.85] tracking-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[0.9] tracking-tight mb-6"
             variants={itemVariants}
             style={{ 
               fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -124,7 +124,7 @@ const Features = () => {
           </motion.h2>
 
           <motion.p 
-            className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto font-normal px-4"
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
@@ -163,7 +163,7 @@ const Features = () => {
                   </h4>
                   <p 
                     className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
-                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
+                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
                     dangerouslySetInnerHTML={{ 
                       __html: highlightKeywords(allFeatures[0].description, allFeatures[0].keywords, allFeatures[0].textColor) 
                     }}
@@ -196,7 +196,7 @@ const Features = () => {
                   </h4>
                   <p 
                     className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
-                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
+                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
                     dangerouslySetInnerHTML={{ 
                       __html: highlightKeywords(allFeatures[1].description, allFeatures[1].keywords, allFeatures[1].textColor) 
                     }}
@@ -232,7 +232,7 @@ const Features = () => {
                   </h4>
                   <p 
                     className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
-                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
+                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
                     dangerouslySetInnerHTML={{ 
                       __html: highlightKeywords(allFeatures[2].description, allFeatures[2].keywords, allFeatures[2].textColor) 
                     }}
@@ -265,7 +265,7 @@ const Features = () => {
                   </h4>
                   <p 
                     className="text-sm sm:text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
-                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}
+                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
                     dangerouslySetInnerHTML={{ 
                       __html: highlightKeywords(allFeatures[3].description, allFeatures[3].keywords, allFeatures[3].textColor) 
                     }}

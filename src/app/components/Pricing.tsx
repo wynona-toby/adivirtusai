@@ -54,7 +54,8 @@ const Pricing = () => {
         "Up to 50 employees",
         "Email Support"
       ],
-      isPopular: false
+      isPopular: false,
+      buttonStyle: "secondary"
     },
     {
       name: "Premium",
@@ -68,7 +69,8 @@ const Pricing = () => {
         "Priority Support",
         "Strategic Insights Engine"
       ],
-      isPopular: true
+      isPopular: true,
+      buttonStyle: "primary"
     },
     {
       name: "Enterprise",
@@ -82,14 +84,15 @@ const Pricing = () => {
         "24/7 Dedicated Support",
         "Advanced Analytics & Reporting"
       ],
-      isPopular: false
+      isPopular: false,
+      buttonStyle: "secondary"
     }
   ];
 
   return (
-    <section id="pricing" className="relative min-h-screen bg-[#0A0A0B] overflow-hidden py-20 lg:py-32">
+    <section id="pricing" className="relative min-h-screen bg-black overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-50"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
       <motion.div 
         ref={ref}
@@ -104,15 +107,15 @@ const Pricing = () => {
           variants={itemVariants}
         >
           <motion.div 
-            className="inline-flex items-center space-x-3 px-4 py-2 bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-full shadow-lg mx-auto mb-6"
+            className="inline-flex items-center space-x-3 px-4 py-2 bg-pink-500/30 backdrop-blur-sm border border-pink-500/50 rounded-full shadow-lg mx-auto mb-6"
             variants={itemVariants}
           >
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse shadow-sm shadow-blue-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>FLEXIBLE PRICING</span>
+            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse shadow-sm shadow-pink-400/50"></div>
+            <span className="text-sm font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>FLEXIBLE PRICING</span>
           </motion.div>
 
           <motion.h2 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[0.9] tracking-tight mb-4 sm:mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[0.9] tracking-tight mb-4 sm:mb-6"
             variants={itemVariants}
             style={{ 
               fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
@@ -123,7 +126,7 @@ const Pricing = () => {
           </motion.h2>
 
           <motion.p 
-            className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto px-4"
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
@@ -146,7 +149,20 @@ const Pricing = () => {
                 transition: { duration: 0.3, ease: "easeOut" }
               }}
             >
-              <div className="relative overflow-hidden rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 bg-[#101010]">
+              {/* Popular Badge */}
+              {plan.isPopular && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                    Most Popular
+                  </div>
+                </div>
+              )}
+              
+              <div className={`relative overflow-hidden rounded-3xl p-6 sm:p-8 h-full transition-all duration-300 ${
+                plan.isPopular 
+                  ? 'bg-gradient-to-b from-blue-500/10 to-blue-600/5 border border-blue-500/30' 
+                  : 'bg-[#101010] border border-slate-700/30'
+              }`}>
                 <div className="relative z-10">
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     {plan.name}
@@ -159,18 +175,29 @@ const Pricing = () => {
                     <span className="text-slate-400 text-lg ml-2" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>/month</span>
                   </div>
                   
-                  <p className="text-sm sm:text-base leading-relaxed mb-8 text-slate-400 min-h-[3rem]" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
+                  <p className="text-sm sm:text-base leading-relaxed mb-8 text-slate-400 min-h-[3rem]" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
                     {plan.description}
                   </p>
 
-                  <motion.button
-                    className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 border-2 border-slate-600 text-white hover:bg-slate-800 hover:border-slate-500 focus:ring-slate-500 focus:ring-offset-slate-900"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
-                  >
-                    Get Started
-                  </motion.button>
+                  {plan.buttonStyle === "primary" ? (
+                    <motion.button
+                      className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 focus:ring-blue-500 focus:ring-offset-slate-900 shadow-lg hover:shadow-xl"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
+                    >
+                      Get Started
+                    </motion.button>
+                  ) : (
+                    <motion.button
+                      className="w-full py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 mb-8 bg-slate-800/50 border border-slate-600/50 text-white hover:bg-slate-700/50 hover:border-slate-500/50 focus:ring-slate-500 focus:ring-offset-slate-900 backdrop-blur-sm"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
+                    >
+                      Get Started
+                    </motion.button>
+                  )}
 
                   <p className="text-base font-semibold mb-4 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
                     What's included:
@@ -178,7 +205,7 @@ const Pricing = () => {
                   
                   <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start text-sm sm:text-base text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
+                      <li key={featureIndex} className="flex items-start text-sm sm:text-base text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
                         <svg className="w-5 h-5 mr-3 mt-0.5 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
