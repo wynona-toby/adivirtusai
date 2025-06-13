@@ -60,7 +60,7 @@ const DarkModeExtensionDetector: React.FC = () => {
               return sheet.ownerNode && 
                      (sheet.ownerNode as HTMLElement).id?.includes('dark') ||
                      (sheet.ownerNode as HTMLElement).className?.includes('dark');
-            } catch (e) {
+            } catch {
               return false;
             }
           });
@@ -92,7 +92,7 @@ const DarkModeExtensionDetector: React.FC = () => {
       return detectionMethods.some(method => {
         try {
           return method();
-        } catch (e) {
+        } catch {
           return false;
         }
       });
