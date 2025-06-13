@@ -8,8 +8,7 @@
     "build:static": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && npx wrangler pages deploy out",
-    "deploy:assets": "npx wrangler deploy --assets=./out"
+    "deploy": "npm run build && npx wrangler pages deploy out"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
