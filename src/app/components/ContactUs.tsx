@@ -26,7 +26,7 @@ export default function ContactUs() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-sm shadow-emerald-400/50"></div>
-            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>LET'S CONNECT</span>
+            <span className="text-sm font-semibold text-slate-300" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>LET&apos;S CONNECT</span>
           </motion.div>
 
           {/* Main Heading */}
