@@ -71,7 +71,7 @@ const CaseStudiesPage = () => {
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
-            We're currently in our MVP pilot stage, working with forward-thinking organizations to refine and perfect our AI-powered workforce development platform.
+            We&apos;re currently in our MVP pilot stage, working with forward-thinking organizations to refine and perfect our AI-powered workforce development platform.
           </motion.p>
         </motion.div>
 
@@ -86,7 +86,7 @@ const CaseStudiesPage = () => {
             </h2>
             
             <p className="text-lg text-slate-300 mb-8 leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
-              As we're in the MVP pilot stage, we're offering <span className="text-blue-400 font-semibold">Adivirtus AI completely free for one month</span> to organizations willing to provide feedback and help us shape the future of workforce development.
+              As we&apos;re in the MVP pilot stage, we&apos;re offering <span className="text-blue-400 font-semibold">Adivirtus AI completely free for one month</span> to organizations willing to provide feedback and help us shape the future of workforce development.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -136,7 +136,7 @@ const CaseStudiesPage = () => {
           </h2>
           
           <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
-            We're currently working with our pilot partners to gather comprehensive data and results. Detailed case studies will be published here as we complete our pilot phase.
+            We&apos;re currently working with our pilot partners to gather comprehensive data and results. Detailed case studies will be published here as we complete our pilot phase.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

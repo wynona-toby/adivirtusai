@@ -97,7 +97,7 @@ const About = () => {
           >
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed text-center mb-12 px-4"
                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
-              At Adivirtus AI, we believe every employee deserves personalized growth opportunities, and every business deserves to unlock their team's full potential. Founded with a vision to democratize world-class upskilling for small and medium businesses, we're revolutionizing how companies develop their most valuable asset—their people.
+              At Adivirtus AI, we believe every employee deserves personalized growth opportunities, and every business deserves to unlock their team&apos;s full potential. Founded with a vision to democratize world-class upskilling for small and medium businesses, we&apos;re revolutionizing how companies develop their most valuable asset—their people.
             </p>
 
             {/* Tags */}

@@ -93,7 +93,7 @@ const ComingSoonPage = () => {
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
-            We're working on something amazing to keep you updated with the latest in AI workforce transformation
+            We&apos;re working on something amazing to keep you updated with the latest in AI workforce transformation
           </motion.p>
 
           {/* Features Grid */}
@@ -175,7 +175,7 @@ const ComingSoonPage = () => {
               Get Notified When We Launch
             </h3>
             <p className="text-slate-300 mb-6 max-w-md mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
-              Be the first to know when our newsletter and updates go live. We'll send you a quick notification.
+              Be the first to know when our newsletter and updates go live. We&apos;ll send you a quick notification.
             </p>
             
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

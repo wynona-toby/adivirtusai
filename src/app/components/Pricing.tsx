@@ -144,7 +144,7 @@ const Pricing = () => {
               fontWeight: 600
             }}
           >
-            We're Currently <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Piloting</span>
+            We&apos;re Currently <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Piloting</span>
           </motion.h2>
 
           <motion.p 
@@ -176,7 +176,7 @@ const Pricing = () => {
               </h3>
               
               <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
-                We're working with select organizations to perfect our AI-powered workforce transformation platform. Join our pilot program and help shape the future.
+                We&apos;re working with select organizations to perfect our AI-powered workforce transformation platform. Join our pilot program and help shape the future.
               </p>
 
               {/* Benefits */}
@@ -241,7 +241,7 @@ const Pricing = () => {
               </motion.button>
 
               <p className="text-slate-400 text-sm mt-6 max-w-md mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
-                Limited spots available. Join the waitlist and we'll reach out when we're ready for your organization.
+                Limited spots available. Join the waitlist and we&apos;ll reach out when we&apos;re ready for your organization.
               </p>
             </div>
           </div>

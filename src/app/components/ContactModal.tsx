@@ -165,7 +165,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     </svg>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-                  <p className="text-slate-300">Thank you for contacting us. We'll get back to you soon!</p>
+                  <p className="text-slate-300">Thank you for contacting us. We&apos;ll get back to you soon!</p>
                 </motion.div>
               ) : (
                                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">

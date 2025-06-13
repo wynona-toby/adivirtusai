@@ -95,7 +95,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Footer Links Sections */}
-          {footerSections.map((section, index) => (
+          {footerSections.map((section) => (
             <motion.div 
               key={section.title}
               className="lg:col-span-1"

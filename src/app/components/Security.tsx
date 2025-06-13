@@ -155,7 +155,7 @@ const Security = () => {
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
             Adivirtus AI is built for ambitious AI projects. You can integrate it with your existing tech stack and scale it as you grow. 
-            We've implemented sophisticated and top-notch security measures and protocols to protect your data.
+            We&apos;ve implemented sophisticated and top-notch security measures and protocols to protect your data.
           </motion.p>
         </motion.div>
 

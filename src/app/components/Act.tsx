@@ -15,7 +15,7 @@ const Act = () => {
             </p>
             
             <p>
-              That voice in your head asking, "Why are companies still using static assessments and one-size-fits-all training? Why isn't there an intelligent system that actually adapts?"
+              That voice in your head asking, &ldquo;Why are companies still using static assessments and one-size-fits-all training? Why isn&apos;t there an intelligent system that actually adapts?&rdquo;
             </p>
             
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">
@@ -27,11 +27,11 @@ const Act = () => {
             </p>
             
             <p>
-              My father Vijay, with his 23 years of L&D experience, had witnessed the limitations of traditional systems. Together, we pitched: "We can build AI agents that don't just deliver content - they understand learners, predict needs, and continuously optimize the entire learning ecosystem."
+              My father Vijay, with his 23 years of L&amp;D experience, had witnessed the limitations of traditional systems. Together, we pitched: &ldquo;We can build AI agents that don&apos;t just deliver content - they understand learners, predict needs, and continuously optimize the entire learning ecosystem.&rdquo;
             </p>
             
             <p>
-              We didn't have a full platform. But we started building anyway.
+              We didn&apos;t have a full platform. But we started building anyway.
             </p>
             
             <p>
@@ -55,7 +55,7 @@ const Act = () => {
             </p>
             
             <p>
-              What we discovered was game-changing. Organizations were constrained by static, reactive systems that couldn't adapt, predict, or optimize autonomously. They described existing platforms as "outdated infrastructure."
+              What we discovered was game-changing. Organizations were constrained by static, reactive systems that couldn&apos;t adapt, predict, or optimize autonomously. They described existing platforms as &ldquo;outdated infrastructure.&rdquo;
             </p>
             
             <h2 className="text-3xl font-bold text-white mt-12 mb-6">
@@ -83,7 +83,7 @@ const Act = () => {
             </p>
             
             <p>
-              We're now selected for pre-incubation at CIBA, building the platform around this agentic intelligence breakthrough. Our system represents a fundamental shift from static training tools to dynamic, autonomous learning infrastructure.
+              We&apos;re now selected for pre-incubation at CIBA, building the platform around this agentic intelligence breakthrough. Our system represents a fundamental shift from static training tools to dynamic, autonomous learning infrastructure.
             </p>
             
             <div className="bg-[#101010] border border-slate-700/50 rounded-lg p-6 mt-12">

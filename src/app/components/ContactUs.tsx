@@ -59,7 +59,7 @@ export default function ContactUs() {
             </p>
             <p className="text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto font-light px-4"
                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 300 }}>
-              Ready to transform your workforce? Let's discuss how our agentic AI solutions can revolutionize your team's learning journey.
+              Ready to transform your workforce? Let&apos;s discuss how our agentic AI solutions can revolutionize your team&apos;s learning journey.
             </p>
           </motion.div>
           

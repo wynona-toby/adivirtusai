@@ -99,7 +99,19 @@ const Features = () => {
     return highlightedText;
   };
 
-  const FeatureCard = ({ feature, className }: { feature: any, className: string }) => {
+  interface Feature {
+    tag: string;
+    title: string;
+    description: string;
+    hoverDescription: string;
+    keywords: string[];
+    textColor: string;
+    tagColor: string;
+    hoverBg: string;
+    hoverBorder: string;
+  }
+
+  const FeatureCard = ({ feature, className }: { feature: Feature, className: string }) => {
     const [isHovered, setIsHovered] = useState(false);
     
     return (
