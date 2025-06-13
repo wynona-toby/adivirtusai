@@ -1,0 +1,8 @@
+{
+  "name": "adivirtus-ai",
+  "compatibility_date": "2025-01-13",
+  "assets": {
+    "directory": "./out"
+  },
+  "pages_build_output_dir": "./out"
+} 

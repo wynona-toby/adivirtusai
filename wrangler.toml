@@ -1,0 +1,12 @@
+name = "adivirtus-ai"
+compatibility_date = "2025-01-13"
+
+[env.production]
+compatibility_date = "2025-01-13"
+
+# Static assets configuration
+[site]
+bucket = "./out"
+
+# Pages configuration
+pages_build_output_dir = "./out" 
