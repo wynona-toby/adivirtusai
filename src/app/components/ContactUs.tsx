@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import CalModal from "./CalModal";
+import ContactModal from "./ContactModal";
 
 export default function ContactUs() {
+  const [isCalModalOpen, setIsCalModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
+    <>
     <section id="contact" className="relative min-h-screen bg-black overflow-hidden py-20 lg:py-32">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
@@ -71,6 +78,7 @@ export default function ContactUs() {
               }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              onClick={() => setIsContactModalOpen(true)}
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-100"
@@ -102,6 +110,7 @@ export default function ContactUs() {
               }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              onClick={() => setIsCalModalOpen(true)}
             >
               {/* Animated gradient border */}
               <span className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/80 to-emerald-400/80 animate-pulse-slow opacity-80"></span>
@@ -130,7 +139,7 @@ export default function ContactUs() {
                     d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
                   />
                 </svg>
-                <span className="text-green-100 text-sm sm:text-base">View Demo</span>
+                <span className="text-green-100 text-sm sm:text-base">Book Demo</span>
               </span>
               
               {/* Hover effect */}
@@ -187,5 +196,18 @@ export default function ContactUs() {
       <div className="absolute top-1/4 left-1/4 w-32 lg:w-64 h-32 lg:h-64 border border-slate-800/20 rotate-45 opacity-10"></div>
       <div className="absolute bottom-1/3 right-1/4 w-24 lg:w-48 h-24 lg:h-48 border border-slate-700/15 rotate-12 opacity-10"></div>
     </section>
+
+    {/* Cal.com Modal */}
+    <CalModal 
+      isOpen={isCalModalOpen} 
+      onClose={() => setIsCalModalOpen(false)} 
+    />
+
+    {/* Contact Modal */}
+    <ContactModal 
+      isOpen={isContactModalOpen} 
+      onClose={() => setIsContactModalOpen(false)} 
+    />
+    </>
   );
 } 

@@ -1,13 +1,16 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import Image from 'next/image';
+import CalModal from './CalModal';
 
 // Main Hero Component
 export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
+  const [isCalModalOpen, setIsCalModalOpen] = useState(false);
 
   useEffect(() => {
     if (isInView) {
@@ -39,6 +42,7 @@ export default function Hero() {
   };
 
   return (
+    <>
     <motion.section 
       ref={ref}
       className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center"
@@ -110,13 +114,152 @@ export default function Hero() {
             Experience the future of corporate training where intelligent agents work continuously to identify skill gaps, create personalized learning paths, and optimize team performance.
           </motion.p>
 
+          {/* CIBA Backed Tag */}
+          <motion.div 
+            className="flex justify-center"
+            variants={itemVariants}
+          >
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              {/* CIBA Backed Tag */}
+              <motion.div
+                className="inline-flex items-center space-x-3 px-4 py-2.5 bg-slate-900/70 backdrop-blur-sm border border-slate-600/40 rounded-lg shadow-lg hover:border-slate-500/60 transition-all duration-300"
+                animate={{
+                  y: [0, -8, 0],
+                }}
+                whileHover={{ 
+                  scale: 1.02,
+                  y: -10,
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  },
+                  scale: { type: "spring", stiffness: 400, damping: 17 },
+                  boxShadow: { type: "spring", stiffness: 400, damping: 17 }
+                }}
+              >
+                <div className="flex-shrink-0">
+                  <Image
+                    src="/ciba.png"
+                    alt="CIBA"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
+                  />
+                </div>
+                <span 
+                  className="text-sm font-semibold text-slate-200"
+                  style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
+                >
+                  CIBA Backed
+                </span>
+              </motion.div>
+
+              {/* Enterprise Security Tag */}
+              <motion.div
+                className="inline-flex items-center space-x-3 px-4 py-2.5 bg-emerald-900/40 backdrop-blur-sm border border-emerald-600/40 rounded-lg shadow-lg hover:border-emerald-500/60 transition-all duration-300"
+                animate={{
+                  y: [0, -8, 0],
+                }}
+                whileHover={{ 
+                  scale: 1.02,
+                  y: -10,
+                  boxShadow: "0 10px 25px rgba(16, 185, 129, 0.2)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{
+                  y: {
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  },
+                  scale: { type: "spring", stiffness: 400, damping: 17 },
+                  boxShadow: { type: "spring", stiffness: 400, damping: 17 }
+                }}
+              >
+                <div className="flex-shrink-0">
+                  <svg 
+                    className="w-6 h-6 text-emerald-400" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" 
+                    />
+                  </svg>
+                </div>
+                <span 
+                  className="text-sm font-semibold text-emerald-200"
+                  style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
+                >
+                  Enterprise Security
+                </span>
+              </motion.div>
+
+              {/* Enterprise Ready Tag */}
+              <motion.div
+                className="inline-flex items-center space-x-3 px-4 py-2.5 bg-blue-900/40 backdrop-blur-sm border border-blue-600/40 rounded-lg shadow-lg hover:border-blue-500/60 transition-all duration-300"
+                animate={{
+                  y: [0, -8, 0],
+                }}
+                whileHover={{ 
+                  scale: 1.02,
+                  y: -10,
+                  boxShadow: "0 10px 25px rgba(59, 130, 246, 0.2)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{
+                  y: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  },
+                  scale: { type: "spring", stiffness: 400, damping: 17 },
+                  boxShadow: { type: "spring", stiffness: 400, damping: 17 }
+                }}
+              >
+                <div className="flex-shrink-0">
+                  <svg 
+                    className="w-6 h-6 text-blue-400" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" 
+                    />
+                  </svg>
+                </div>
+                <span 
+                  className="text-sm font-semibold text-blue-200"
+                  style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
+                >
+                  Enterprise Ready
+                </span>
+              </motion.div>
+            </div>
+          </motion.div>
+
           {/* CTA Buttons */}
           <motion.div 
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-8 justify-center items-center max-w-lg mx-auto"
             variants={itemVariants}
           >
                           <motion.button
-                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none text-sm sm:text-base"
+                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 to-blue-500 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none text-sm sm:text-base"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
@@ -125,7 +268,7 @@ export default function Hero() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-300 to-cyan-300 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-400 opacity-0 group-hover:opacity-100"
                   transition={{ duration: 0.3 }}
                 />
               <motion.div
@@ -135,7 +278,7 @@ export default function Hero() {
                 transition={{ duration: 0.4 }}
               />
               <span className="relative z-10 flex items-center justify-center">
-                Experience Agentic AI
+                Try Free
                 <motion.span
                   className="ml-2 inline-block"
                   animate={{ x: [0, 4, 0] }}
@@ -154,9 +297,10 @@ export default function Hero() {
               }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              onClick={() => setIsCalModalOpen(true)}
             >
               {/* Animated gradient border */}
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/80 to-cyan-400/80 animate-pulse-slow opacity-80"></span>
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/80 to-blue-500/80 animate-pulse-slow opacity-80"></span>
               
               {/* Inner background with blur */}
               <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
@@ -182,12 +326,12 @@ export default function Hero() {
                     d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" 
                   />
                 </svg>
-                <span className="text-blue-100">View Demo</span>
+                <span className="text-blue-100">Book Demo</span>
               </span>
               
               {/* Hover effect */}
               <motion.span
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 to-cyan-400/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 to-blue-600/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
@@ -237,5 +381,12 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-32 lg:w-64 h-32 lg:h-64 border border-slate-800/20 rotate-45 opacity-10"></div>
       <div className="absolute bottom-1/3 right-1/4 w-24 lg:w-48 h-24 lg:h-48 border border-slate-700/15 rotate-12 opacity-10"></div>
     </motion.section>
+    
+    {/* Cal.com Modal */}
+    <CalModal 
+      isOpen={isCalModalOpen} 
+      onClose={() => setIsCalModalOpen(false)} 
+    />
+    </>
   );
 }

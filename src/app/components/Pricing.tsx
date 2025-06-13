@@ -43,6 +43,8 @@ const Pricing = () => {
     }
   };
 
+  // Commented out pricing plans - currently in pilot phase
+  /*
   const pricingPlans = [
     {
       name: "INITIUM",
@@ -105,6 +107,7 @@ const Pricing = () => {
       buttonStyle: "secondary"
     }
   ];
+  */
 
   return (
     <section id="pricing" className="relative min-h-screen bg-black overflow-hidden py-20 lg:py-32">
@@ -128,7 +131,7 @@ const Pricing = () => {
             variants={itemVariants}
           >
             <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse shadow-sm shadow-pink-400/50"></div>
-            <span className="text-sm font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>FLEXIBLE PRICING</span>
+            <span className="text-sm font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>PILOT PROGRAM</span>
           </motion.div>
 
           <motion.h2 
@@ -139,7 +142,7 @@ const Pricing = () => {
               fontWeight: 600
             }}
           >
-            Make the wise decision for your <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">business</span>
+            We're Currently <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Piloting</span>
           </motion.h2>
 
           <motion.p 
@@ -147,11 +150,102 @@ const Pricing = () => {
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
-            Choose from our affordable 3 packages designed to scale with your workforce needs
+            Join our exclusive pilot program and be among the first to experience the future of AI-powered workforce transformation
           </motion.p>
         </motion.div>
 
-        {/* Pricing Cards Grid */}
+        {/* Pilot Program Card */}
+        <motion.div 
+          className="max-w-4xl mx-auto"
+          variants={cardVariants}
+        >
+          <div className="relative overflow-hidden rounded-3xl p-8 sm:p-12 lg:p-16 bg-gradient-to-b from-pink-400/10 to-rose-500/5 border border-pink-400/30 text-center">
+            <div className="relative z-10">
+              {/* Pilot Badge */}
+              <div className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-pink-400/20 to-rose-500/20 backdrop-blur-sm border border-pink-400/50 rounded-full shadow-lg mb-8">
+                <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse shadow-sm shadow-pink-400/50"></div>
+                <span className="text-base font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
+                  EXCLUSIVE PILOT ACCESS
+                </span>
+              </div>
+
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
+                Get Early Access
+              </h3>
+              
+              <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
+                We're working with select organizations to perfect our AI-powered workforce transformation platform. Join our pilot program and help shape the future.
+              </p>
+
+              {/* Benefits */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">1 Month Free Trial</h4>
+                  <p className="text-slate-400 text-sm">Full access to all features with no commitment</p>
+                </div>
+
+                <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Dedicated Support</h4>
+                  <p className="text-slate-400 text-sm">Direct access to our team for implementation and training</p>
+                </div>
+
+                <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Shape the Future</h4>
+                  <p className="text-slate-400 text-sm">Your feedback directly influences our roadmap</p>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <motion.button
+                className="inline-flex items-center px-8 sm:px-12 py-4 sm:py-5 bg-gradient-to-r from-pink-400 to-rose-500 text-white font-semibold rounded-full shadow-xl text-lg relative overflow-hidden"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 25px 50px rgba(244, 114, 182, 0.4)"
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}
+              >
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-pink-300 to-rose-400 opacity-0 group-hover:opacity-100"
+                  transition={{ duration: 0.3 }}
+                />
+                <span className="relative z-10 flex items-center justify-center">
+                  Contact Sales for Pilot Access
+                  <motion.span
+                    className="ml-3 inline-block"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.button>
+
+              <p className="text-slate-400 text-sm mt-6 max-w-md mx-auto" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}>
+                Limited spots available. Join the waitlist and we'll reach out when we're ready for your organization.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Commented out original pricing cards */}
+        {/*
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto"
           variants={containerVariants}
@@ -166,7 +260,6 @@ const Pricing = () => {
                 transition: { duration: 0.3, ease: "easeOut" }
               }}
             >
-              {/* Popular Badge */}
               {plan.isPopular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="bg-gradient-to-r from-pink-400 to-rose-500 text-white px-4 py-1 rounded-full text-xs font-semibold">
@@ -242,6 +335,7 @@ const Pricing = () => {
             </motion.div>
           ))}
         </motion.div>
+        */}
       </motion.div>
     </section>
   );
