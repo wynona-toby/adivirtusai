@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import Image from 'next/image';
 import CalModal from './CalModal';
+import SalesCalModal from './SalesCalModal';
 
 // Main Hero Component
 export default function Hero() {
@@ -11,6 +12,7 @@ export default function Hero() {
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
   const [isCalModalOpen, setIsCalModalOpen] = useState(false);
+  const [isSalesCalModalOpen, setIsSalesCalModalOpen] = useState(false);
 
   useEffect(() => {
     if (isInView) {
@@ -266,6 +268,7 @@ export default function Hero() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                onClick={() => setIsSalesCalModalOpen(true)}
               >
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-400 opacity-0 group-hover:opacity-100"
@@ -386,6 +389,12 @@ export default function Hero() {
     <CalModal 
       isOpen={isCalModalOpen} 
       onClose={() => setIsCalModalOpen(false)} 
+    />
+    
+    {/* Sales Cal.com Modal */}
+    <SalesCalModal 
+      isOpen={isSalesCalModalOpen} 
+      onClose={() => setIsSalesCalModalOpen(false)} 
     />
     </>
   );

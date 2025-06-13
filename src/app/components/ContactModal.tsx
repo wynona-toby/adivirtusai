@@ -74,10 +74,10 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID (e.g., 'service_abc123')
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID (e.g., 'template_xyz789')
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         templateParams,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key (e.g., 'pk_abcdef123456789')
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
 
       setSubmitStatus('success');

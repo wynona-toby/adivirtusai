@@ -43,20 +43,20 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navigationItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium cursor-pointer"
+                className="text-white hover:text-blue-400 transition-colors duration-200 text-sm font-medium cursor-pointer px-2 py-1"
               >
                 {item.label}
               </button>
             ))}
           </nav>
 
-          {/* Right Side Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Right Side Button - Contact Us Only */}
+          <div className="hidden md:flex items-center">
             <button 
               onClick={() => handleNavClick('#contact')}
               className="group relative px-4 py-2 bg-transparent text-white font-medium rounded-lg transition-all duration-300 overflow-hidden"
@@ -75,16 +75,13 @@ export default function Header() {
                 <span>Contact Us</span>
               </span>
             </button>
-            <button className="bg-gradient-to-r from-blue-400 to-cyan-400 text-white hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 text-sm font-medium px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
-              Demo
-            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-gray-300 focus:outline-none"
+              className="text-white hover:text-gray-300 focus:outline-none p-2"
               aria-label="Toggle mobile menu"
             >
               <svg 
@@ -112,12 +109,12 @@ export default function Header() {
                 <button
                   key={item.label}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-white hover:text-blue-400 block px-3 py-2 text-sm font-medium w-full text-left"
+                  className="text-white hover:text-blue-400 block px-3 py-2 text-sm font-medium w-full text-left transition-colors duration-200"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="border-t border-white/20 pt-3 mt-3 space-y-2">
+              <div className="border-t border-white/20 pt-3 mt-3">
                 <button 
                   onClick={() => handleNavClick('#contact')}
                   className="w-full relative bg-transparent text-white font-medium px-3 py-2 rounded-lg transition-all duration-300 overflow-hidden group"
@@ -130,9 +127,6 @@ export default function Header() {
                     </svg>
                     <span>Contact Us</span>
                   </span>
-                </button>
-                <button className="w-full bg-gradient-to-r from-blue-400 to-cyan-400 text-white hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 text-sm font-medium px-3 py-2 rounded-lg shadow-lg">
-                  Demo
                 </button>
               </div>
             </div>

@@ -17,6 +17,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Adivirtus AI - Intelligent Solutions",
   description: "Advanced AI solutions for modern businesses",
+  icons: {
+    icon: [
+      { url: '/icon.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/icon-192.svg', sizes: '192x192', type: 'image/svg+xml' }
+    ],
+    shortcut: '/icon.svg',
+    apple: '/icon-192.svg',
+  },
 };
 
 export default function RootLayout({
