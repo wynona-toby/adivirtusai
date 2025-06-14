@@ -73,7 +73,7 @@ const About = () => {
             <span className="text-sm font-semibold text-white" style={{ fontFamily: '"TT Hoves", -apple-system, BlinkMacSystemFont, sans-serif' }}>ABOUT</span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h2 
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[0.9] tracking-tight mb-8"
             variants={itemVariants}
             style={{ 
@@ -81,8 +81,8 @@ const About = () => {
               fontWeight: 600
             }}
           >
-            Transforming Corporate Training Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Agentic AI</span>
-          </motion.h1>
+            Adivirtus AI: Transforming Workforce Learning Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Agentic AI</span>
+          </motion.h2>
         </motion.div>
 
         {/* Main Content */}

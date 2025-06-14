@@ -96,7 +96,7 @@ const AthenaPage = () => {
               </motion.div>
 
               {/* Main Title */}
-              <motion.h1 
+              <motion.h2 
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[0.9] tracking-tight"
                 variants={leftVariants}
                 style={{ 
@@ -105,7 +105,7 @@ const AthenaPage = () => {
                 }}
               >
                 Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Athena</span>
-              </motion.h1>
+              </motion.h2>
 
               {/* Subtitle */}
               <motion.h2 

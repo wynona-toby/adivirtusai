@@ -36,14 +36,14 @@ export default function ContactUs() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[0.9] tracking-tight"
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[0.9] tracking-tight"
                 style={{ 
                   fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 600
                 }}>
               <span className="block text-white">Join the</span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mt-2">Movement</span>
-            </h1>
+            </h2>
           </motion.div>
           
           {/* Description */}

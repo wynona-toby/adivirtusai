@@ -259,7 +259,7 @@ const Features = () => {
               fontWeight: 600
             }}
           >
-            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Everyone</span>
+            Personalized Learning & Skill Gap <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Analysis</span>
           </motion.h2>
 
           <motion.p 
@@ -267,7 +267,7 @@ const Features = () => {
             variants={itemVariants}
             style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400 }}
           >
-            From individual learners to enterprise teams, our AI-powered platform adapts to your needs
+            AI agents deliver learning roadmaps and skill assessments to transform workforce training with future-ready solutions
           </motion.p>
         </motion.div>
 

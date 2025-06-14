@@ -86,7 +86,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="block"
             >
-              Transform Your Workforce
+              Transform Workforce Learning
             </motion.span>
             <motion.span 
               className="text-blue-400 block"
@@ -94,7 +94,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
             >
-              with Agentic AI
+              with Agentic AI Training
             </motion.span>
           </motion.h1>
 

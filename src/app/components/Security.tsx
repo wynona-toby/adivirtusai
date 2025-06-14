@@ -138,7 +138,7 @@ const Security = () => {
             <span className="text-sm font-semibold text-white" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>ENTERPRISE READY</span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h2 
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[0.9] tracking-tight mb-6"
             variants={itemVariants}
             style={{ 
@@ -146,8 +146,8 @@ const Security = () => {
               fontWeight: 600
             }}
           >
-            Engineered with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">ambition</span>
-          </motion.h1>
+            Future-Ready Security with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Tech Stack Integration</span>
+          </motion.h2>
 
           <motion.p 
             className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-3xl px-4 lg:px-0"
