@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Adivirtus AI - Learning & Training Solutions | Agentic AI",
   description: "Adivirtus AI transforms workforce training with personalized learning roadmaps, skill gap analysis, and agentic AI agents. Revolutionize corporate learning with AI-powered skill assessments and future-ready training solutions.",
-  metadataBase: new URL('https://adivirtus-ai.pages.dev'),
+  metadataBase: new URL('https://adivirtus.com'),
   alternates: {
     canonical: '/',
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://adivirtus-ai.pages.dev',
+    url: 'https://adivirtus.com',
     title: 'Adivirtus AI - Learning & Training Solutions | Agentic AI',
     description: 'Adivirtus AI transforms workforce training with personalized learning roadmaps, skill gap analysis, and agentic AI agents.',
     siteName: 'Adivirtus AI',
@@ -67,8 +67,8 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "Adivirtus AI",
     "description": "AI-powered workforce training and learning solutions with personalized learning roadmaps and skill gap analysis",
-    "url": "https://adivirtus-ai.pages.dev",
-    "logo": "https://adivirtus-ai.pages.dev/icon-192.svg",
+    "url": "https://adivirtus.com",
+    "logo": "https://adivirtus.com/icon-192.svg",
     "foundingDate": "2024",
     "industry": "Artificial Intelligence, EdTech, Corporate Training",
     "serviceType": "AI-powered learning and development solutions",
@@ -101,7 +101,7 @@ export default function RootLayout({
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https://adivirtus-ai.pages.dev"
+      "https://adivirtus.com"
     ]
   };
 
