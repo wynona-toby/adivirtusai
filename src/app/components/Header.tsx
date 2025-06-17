@@ -62,7 +62,7 @@ export default function Header() {
               className="group relative px-4 py-2 bg-transparent text-white font-medium rounded-lg transition-all duration-300 overflow-hidden"
             >
               {/* Animated gradient border */}
-              <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/50 to-cyan-400/50 opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+                              <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/50 via-purple-400/50 to-cyan-400/50 opacity-70 group-hover:opacity-100 transition-opacity duration-300 animate-flowing-gradient-slow"></span>
               
               {/* Inner background */}
               <span className="absolute inset-[1px] rounded-lg bg-black/80 backdrop-blur-sm"></span>
@@ -119,7 +119,7 @@ export default function Header() {
                   onClick={() => handleNavClick('#contact')}
                   className="w-full relative bg-transparent text-white font-medium px-3 py-2 rounded-lg transition-all duration-300 overflow-hidden group"
                 >
-                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/30 to-cyan-400/30"></span>
+                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/30 via-purple-400/30 to-cyan-400/30 animate-flowing-gradient"></span>
                   <span className="absolute inset-[1px] rounded-lg bg-black/80"></span>
                   <span className="relative z-10 text-sm flex items-center justify-center space-x-2">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

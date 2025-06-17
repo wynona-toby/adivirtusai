@@ -152,6 +152,52 @@ html {
   }
 }
 
+/* Flowing Gradient Animations */
+@keyframes flowingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes flowingGradientFast {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes flowingGradientSlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -178,6 +224,26 @@ html {
 
 .animate-count-up {
   animation: countUp 0.5s ease-out forwards;
+}
+
+.animate-flowing-gradient {
+  background-size: 400% 400%;
+  animation: flowingGradient 4s ease-in-out infinite;
+}
+
+.animate-flowing-gradient-fast {
+  background-size: 400% 400%;
+  animation: flowingGradientFast 2s ease-in-out infinite;
+}
+
+.animate-flowing-gradient-slow {
+  background-size: 400% 400%;
+  animation: flowingGradientSlow 6s ease-in-out infinite;
+}
+
+.animate-text-shimmer {
+  background-size: 400% 100%;
+  animation: textShimmer 3s ease-in-out infinite;
 }
 
 /* Animation delays */

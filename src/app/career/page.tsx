@@ -141,7 +141,7 @@ const CareerPage = () => {
               fontWeight: 600
             }}
           >
-            Build the future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">AI-powered</span> workforce
+            Build the future of <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-rose-500 animate-text-shimmer">AI-powered</span> workforce
           </motion.h1>
 
           <motion.p 
@@ -164,7 +164,7 @@ const CareerPage = () => {
               onClick={() => setSelectedDepartment(dept)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedDepartment === dept
-                  ? 'bg-gradient-to-r from-pink-400 to-rose-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-pink-400 via-rose-400 to-rose-500 text-white shadow-lg animate-flowing-gradient'
                   : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600/50'
               }`}
               whileHover={{ scale: 1.05 }}
@@ -235,7 +235,7 @@ const CareerPage = () => {
                   </div>
 
                   <motion.button
-                    className="w-auto mx-auto py-3 px-4 text-sm font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-pink-400 to-rose-500 text-white hover:from-pink-500 hover:to-rose-600 focus:ring-pink-500 focus:ring-offset-slate-900 shadow-lg hover:shadow-xl block"
+                    className="w-auto mx-auto py-3 px-4 text-sm font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-pink-400 via-rose-400 to-rose-500 text-white hover:from-pink-500 hover:to-rose-600 focus:ring-pink-500 focus:ring-offset-slate-900 shadow-lg hover:shadow-xl block animate-flowing-gradient"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}

@@ -42,7 +42,7 @@ export default function ContactUs() {
                   fontWeight: 600
                 }}>
               <span className="block text-white">Join the</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 mt-2">Movement</span>
+                              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-400 to-emerald-500 mt-2 animate-text-shimmer">Movement</span>
             </h2>
           </motion.div>
           
@@ -71,7 +71,7 @@ export default function ContactUs() {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <motion.button
-              className="group px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden max-w-xs sm:max-w-none w-full sm:w-auto"
+              className="group px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-500 via-teal-500 to-emerald-600 text-white font-semibold rounded-full shadow-xl relative overflow-hidden max-w-xs sm:max-w-none w-full sm:w-auto animate-flowing-gradient"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px rgba(34, 197, 94, 0.4)"
@@ -81,7 +81,7 @@ export default function ContactUs() {
               onClick={() => setIsContactModalOpen(true)}
             >
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-100"
+                className="absolute inset-0 bg-gradient-to-r from-green-400 via-teal-400 to-emerald-500 opacity-0 group-hover:opacity-100 animate-flowing-gradient-fast"
                 transition={{ duration: 0.3 }}
               />
               <motion.div
@@ -113,7 +113,7 @@ export default function ContactUs() {
               onClick={() => setIsCalModalOpen(true)}
             >
               {/* Animated gradient border */}
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/80 to-emerald-400/80 animate-pulse-slow opacity-80"></span>
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/80 via-teal-400/80 to-emerald-400/80 animate-pulse-slow opacity-80 animate-flowing-gradient-slow"></span>
               
               {/* Inner background with blur */}
               <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
@@ -144,7 +144,7 @@ export default function ContactUs() {
               
               {/* Hover effect */}
               <motion.span
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-green-600/30 to-emerald-400/30 z-0 shadow-[0_0_15px_rgba(34,197,94,0.5)]"
+                                  className="absolute inset-0 rounded-full bg-gradient-to-r from-green-600/30 via-teal-500/30 to-emerald-400/30 z-0 shadow-[0_0_15px_rgba(34,197,94,0.5)] animate-flowing-gradient"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}

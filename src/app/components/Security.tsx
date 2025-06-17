@@ -146,7 +146,7 @@ const Security = () => {
               fontWeight: 600
             }}
           >
-            Future-Ready Security with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Tech Stack Integration</span>
+            Future-Ready Security with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 animate-text-shimmer">Tech Stack Integration</span>
           </motion.h2>
 
           <motion.p 

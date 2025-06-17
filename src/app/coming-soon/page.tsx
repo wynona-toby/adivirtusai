@@ -84,7 +84,7 @@ const ComingSoonPage = () => {
               fontWeight: 600
             }}
           >
-            Stay <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">Connected</span>
+            Stay <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-red-500 animate-text-shimmer">Connected</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -168,7 +168,7 @@ const ComingSoonPage = () => {
 
           {/* Notify Me Section */}
           <motion.div 
-            className="bg-gradient-to-r from-orange-500/10 to-red-500/5 border border-orange-500/30 rounded-2xl p-8"
+                          className="bg-gradient-to-r from-orange-500/10 via-red-400/10 to-red-500/5 border border-orange-500/30 rounded-2xl p-8 animate-flowing-gradient-slow"
             variants={itemVariants}
           >
             <h3 className="text-2xl font-semibold text-white mb-4" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
@@ -181,7 +181,7 @@ const ComingSoonPage = () => {
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/#contact">
                 <motion.button
-                  className="px-6 py-3 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-full shadow-xl hover:from-orange-500 hover:to-red-600 transition-all duration-300"
+                  className="px-6 py-3 bg-gradient-to-r from-orange-400 via-red-400 to-red-500 text-white font-semibold rounded-full shadow-xl hover:from-orange-500 hover:to-red-600 transition-all duration-300 animate-flowing-gradient"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}

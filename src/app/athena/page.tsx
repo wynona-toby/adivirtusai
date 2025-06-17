@@ -104,7 +104,7 @@ const AthenaPage = () => {
                   fontWeight: 600
                 }}
               >
-                Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">Athena</span>
+                Meet <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-blue-400 animate-text-shimmer">Athena</span>
               </motion.h2>
 
               {/* Subtitle */}
@@ -192,7 +192,7 @@ const AthenaPage = () => {
                         textShadow: "0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3)"
                       }}
                     >
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-cyan-400 animate-text-shimmer">
                         Athena
                       </span>
                     </span>

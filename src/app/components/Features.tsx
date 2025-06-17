@@ -259,7 +259,7 @@ const Features = () => {
               fontWeight: 600
             }}
           >
-            Personalized Learning & Skill Gap <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-500">Analysis</span>
+                            Personalized Learning & Skill Gap <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-yellow-400 to-amber-500 animate-text-shimmer">Analysis</span>
           </motion.h2>
 
           <motion.p 

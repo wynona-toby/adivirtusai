@@ -261,7 +261,7 @@ export default function Hero() {
             variants={itemVariants}
           >
                           <motion.button
-                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 to-blue-500 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none text-sm sm:text-base"
+                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-xs sm:max-w-none text-sm sm:text-base animate-flowing-gradient"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
@@ -271,7 +271,7 @@ export default function Hero() {
                 onClick={() => setIsSalesCalModalOpen(true)}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-400 opacity-0 group-hover:opacity-100"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 opacity-0 group-hover:opacity-100 animate-flowing-gradient-fast"
                   transition={{ duration: 0.3 }}
                 />
               <motion.div
@@ -303,7 +303,7 @@ export default function Hero() {
               onClick={() => setIsCalModalOpen(true)}
             >
               {/* Animated gradient border */}
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/80 to-blue-500/80 animate-pulse-slow opacity-80"></span>
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/80 via-cyan-400/80 to-blue-500/80 animate-pulse-slow opacity-80 animate-flowing-gradient-slow"></span>
               
               {/* Inner background with blur */}
               <span className="absolute inset-[2px] rounded-full bg-[#101828]/90 backdrop-blur-md z-0"></span>
@@ -334,7 +334,7 @@ export default function Hero() {
               
               {/* Hover effect */}
               <motion.span
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 to-blue-600/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                  className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 via-cyan-500/30 to-blue-600/30 z-0 shadow-[0_0_15px_rgba(59,130,246,0.5)] animate-flowing-gradient"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}

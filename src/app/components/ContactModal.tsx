@@ -309,7 +309,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                      <motion.button
                        type="submit"
                        disabled={isSubmitting}
-                       className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-xl shadow-lg hover:from-green-600 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                       className="px-8 py-3 bg-gradient-to-r from-green-500 via-teal-500 to-emerald-600 text-white font-medium rounded-xl shadow-lg hover:from-green-600 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 animate-flowing-gradient"
                        whileHover={{ scale: 1.02 }}
                        whileTap={{ scale: 0.98 }}
                      >

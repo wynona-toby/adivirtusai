@@ -63,7 +63,7 @@ const CaseStudiesPage = () => {
               fontWeight: 600
             }}
           >
-            Case Studies & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Pilot Program</span>
+            Case Studies & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-cyan-400 animate-text-shimmer">Pilot Program</span>
           </motion.h1>
 
           <motion.p 
@@ -80,7 +80,7 @@ const CaseStudiesPage = () => {
           className="mb-20 text-center"
           variants={itemVariants}
         >
-          <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/5 border border-blue-500/30 rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-cyan-600/5 border border-blue-500/30 rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto animate-flowing-gradient-slow">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-6" style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}>
               Join Our Pilot Program
             </h2>
@@ -116,7 +116,7 @@ const CaseStudiesPage = () => {
             </div>
 
             <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-blue-400 to-cyan-400 text-white font-semibold rounded-full shadow-xl hover:from-blue-500 hover:to-cyan-500 transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-400 via-cyan-500 to-cyan-400 text-white font-semibold rounded-full shadow-xl hover:from-blue-500 hover:to-cyan-500 transition-all duration-300 animate-flowing-gradient"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{ fontFamily: '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 600 }}

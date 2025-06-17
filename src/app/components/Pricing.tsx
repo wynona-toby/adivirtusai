@@ -136,7 +136,7 @@ const Pricing = () => {
           >
             Shape the Future of
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">AI-Powered Learning</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 animate-text-shimmer">AI-Powered Learning</span>
           </motion.h2>
           
           {/* Description */}
@@ -166,7 +166,7 @@ const Pricing = () => {
         >
           {/* CTA Button - Matching Hero Component Style */}
           <motion.button
-            className="group px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-400 to-blue-500 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-sm sm:max-w-none text-sm sm:text-base md:text-lg"
+            className="group px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-400 via-purple-500 to-blue-500 text-white font-semibold rounded-full shadow-xl relative overflow-hidden w-full sm:w-auto max-w-sm sm:max-w-none text-sm sm:text-base md:text-lg animate-flowing-gradient"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 25px 50px rgba(59, 130, 246, 0.4)"
@@ -177,7 +177,7 @@ const Pricing = () => {
             onClick={() => setIsSalesCalModalOpen(true)}
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-400 opacity-0 group-hover:opacity-100"
+              className="absolute inset-0 bg-gradient-to-r from-blue-300 via-purple-300 to-blue-400 opacity-0 group-hover:opacity-100 animate-flowing-gradient-fast"
               transition={{ duration: 0.3 }}
             />
             <motion.div
@@ -239,7 +239,7 @@ const BenefitCard = ({ benefit, cardVariants }: {
     >
       <div className={`relative rounded-xl sm:rounded-2xl lg:rounded-3xl p-4 sm:p-5 lg:p-6 h-full overflow-hidden transition-all duration-200 ease-out border ${
         isHovered 
-          ? 'bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-400/50 shadow-2xl shadow-black/50'
+          ? 'bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-blue-600/20 border-blue-400/50 shadow-2xl shadow-black/50 animate-flowing-gradient-slow'
           : 'bg-[#101010] border-slate-700/30 hover:border-slate-600/50'
       }`}>
         

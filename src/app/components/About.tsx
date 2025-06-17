@@ -81,7 +81,7 @@ const About = () => {
               fontWeight: 600
             }}
           >
-            Adivirtus AI: Transforming Workforce Learning Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">Agentic AI</span>
+            Adivirtus AI: Transforming Workforce Learning Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-rose-500 animate-text-shimmer">Agentic AI</span>
           </motion.h2>
         </motion.div>
 
