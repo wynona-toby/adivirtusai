@@ -89,10 +89,11 @@ export default function Hero() {
               Transform Workforce Learning
             </motion.span>
             <motion.span 
-              className="text-blue-400 block"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-text-shimmer block leading-[1.2] pb-2"
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4, type: "spring", stiffness: 100 }}
+              style={{ lineHeight: '1.2' }}
             >
               with Agentic AI Training
             </motion.span>
