@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import PageTransition from '../components/PageTransition';
 
 const CareerPage = () => {
   const ref = useRef(null);
@@ -109,7 +110,8 @@ const CareerPage = () => {
     : jobPositions.filter(job => job.department === selectedDepartment);
 
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden">
+    <PageTransition>
+      <section className="relative min-h-screen bg-black overflow-hidden">
       {/* Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,26,31,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(26,26,31,0.3)_1px,transparent_1px)] bg-[size:60px_60px] opacity-100"></div>
       
@@ -290,6 +292,7 @@ const CareerPage = () => {
         </motion.div>
       </motion.div>
     </section>
+    </PageTransition>
   );
 };
 

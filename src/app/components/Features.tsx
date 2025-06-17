@@ -1,11 +1,22 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
+import SkeletonLoader from './SkeletonLoader';
 
 const Features = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -276,17 +287,42 @@ const Features = () => {
           className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8"
           variants={itemVariants}
         >
-          {/* First Row: Responsive grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-            <FeatureCard feature={allFeatures[0]} className="md:col-span-2 lg:col-span-2" />
-            <FeatureCard feature={allFeatures[1]} className="md:col-span-2 lg:col-span-1" />
-          </div>
+          {isLoading ? (
+            <>
+              {/* Skeleton for First Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+                <div className="md:col-span-2 lg:col-span-2">
+                  <SkeletonLoader variant="feature" />
+                </div>
+                <div className="md:col-span-2 lg:col-span-1">
+                  <SkeletonLoader variant="feature" />
+                </div>
+              </div>
+              {/* Skeleton for Second Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+                <div className="md:col-span-2 lg:col-span-1">
+                  <SkeletonLoader variant="feature" />
+                </div>
+                <div className="md:col-span-2 lg:col-span-2">
+                  <SkeletonLoader variant="feature" />
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* First Row: Responsive grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+                <FeatureCard feature={allFeatures[0]} className="md:col-span-2 lg:col-span-2" />
+                <FeatureCard feature={allFeatures[1]} className="md:col-span-2 lg:col-span-1" />
+              </div>
 
-          {/* Second Row: Responsive grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-            <FeatureCard feature={allFeatures[2]} className="md:col-span-2 lg:col-span-1" />
-            <FeatureCard feature={allFeatures[3]} className="md:col-span-2 lg:col-span-2" />
-          </div>
+              {/* Second Row: Responsive grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+                <FeatureCard feature={allFeatures[2]} className="md:col-span-2 lg:col-span-1" />
+                <FeatureCard feature={allFeatures[3]} className="md:col-span-2 lg:col-span-2" />
+              </div>
+            </>
+          )}
         </motion.div>
       </motion.div>
 

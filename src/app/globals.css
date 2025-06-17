@@ -244,6 +244,12 @@ html {
 .animate-text-shimmer {
   background-size: 400% 100%;
   animation: textShimmer 3s ease-in-out infinite;
+  line-height: 1.2;
+  padding-bottom: 0.125rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 /* Animation delays */
@@ -289,6 +295,11 @@ html {
   
   .gradient-text {
     @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+    line-height: 1.2;
+    padding-bottom: 0.125rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   /* Enhanced knowledge capsule styles */

@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import DarkModeExtensionDetector from "./components/DarkModeExtensionDetector";
+import ScrollProgress from "./components/ScrollProgress";
+import Breadcrumb from "./components/Breadcrumb";
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 const geistSans = Geist({
@@ -116,7 +118,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ScrollProgress />
         <Header />
+        <Breadcrumb />
         <main>
           {children}
         </main>

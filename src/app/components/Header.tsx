@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navigationItems = [
   { label: "About", href: "#about" },
@@ -101,37 +102,67 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/80 backdrop-blur-md rounded-lg mt-2">
-              {navigationItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-white hover:text-blue-400 block px-3 py-2 text-sm font-medium w-full text-left transition-colors duration-200"
+        {/* Mobile Navigation Menu - Enhanced */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div 
+              className="md:hidden"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <motion.div 
+                className="px-2 pt-4 pb-4 space-y-1 bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl mt-3 shadow-2xl"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+              >
+                {navigationItems.map((item, index) => (
+                  <motion.button
+                    key={item.label}
+                    onClick={() => handleNavClick(item.href)}
+                    className="text-white hover:text-blue-400 hover:bg-blue-500/10 block px-4 py-3 text-sm font-medium w-full text-left transition-all duration-200 rounded-xl group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: 0.1 + index * 0.05 }}
+                    whileHover={{ x: 8 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                      <span>{item.label}</span>
+                    </div>
+                  </motion.button>
+                ))}
+                
+                <motion.div 
+                  className="border-t border-slate-600/50 pt-4 mt-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 0.4 }}
                 >
-                  {item.label}
-                </button>
-              ))}
-              <div className="border-t border-white/20 pt-3 mt-3">
-                <button 
-                  onClick={() => handleNavClick('#contact')}
-                  className="w-full relative bg-transparent text-white font-medium px-3 py-2 rounded-lg transition-all duration-300 overflow-hidden group"
-                >
-                  <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400/30 via-purple-400/30 to-cyan-400/30 animate-flowing-gradient"></span>
-                  <span className="absolute inset-[1px] rounded-lg bg-black/80"></span>
-                  <span className="relative z-10 text-sm flex items-center justify-center space-x-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    <span>Contact Us</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+                  <motion.button 
+                    onClick={() => handleNavClick('#contact')}
+                    className="w-full relative bg-transparent text-white font-medium px-4 py-3 rounded-xl transition-all duration-300 overflow-hidden group"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-cyan-400/20 animate-flowing-gradient-slow"></span>
+                    <span className="absolute inset-[1px] rounded-xl bg-gradient-to-r from-slate-800/90 to-slate-900/90"></span>
+                    <span className="relative z-10 text-sm flex items-center justify-center space-x-2">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                      <span>Contact Us</span>
+                    </span>
+                  </motion.button>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   )
