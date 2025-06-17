@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import DarkModeExtensionDetector from "./components/DarkModeExtensionDetector";
 import ScrollProgress from "./components/ScrollProgress";
 import Breadcrumb from "./components/Breadcrumb";
+import ExitIntentPopup from "./components/ExitIntentPopup";
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 const geistSans = Geist({
@@ -126,6 +127,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <DarkModeExtensionDetector />
+        <ExitIntentPopup />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_TRACKING_ID || ''} />
       </body>
     </html>
