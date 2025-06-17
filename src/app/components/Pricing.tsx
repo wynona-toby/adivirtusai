@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 import SalesCalModal from './SalesCalModal';
 
 const Pricing = () => {
@@ -155,7 +155,7 @@ const Pricing = () => {
           variants={itemVariants}
         >
           {benefits.map((benefit, index) => (
-            <BenefitCard key={index} benefit={benefit} />
+            <BenefitCard key={index} benefit={benefit} cardVariants={cardVariants} />
           ))}
         </motion.div>
 
@@ -219,24 +219,16 @@ const Pricing = () => {
 };
 
 // BenefitCard Component - Matching Features component style
-const BenefitCard = ({ benefit }: { benefit: { title: string; description: string; tag: string; hoverDescription: string; } }) => {
+const BenefitCard = ({ benefit, cardVariants }: { 
+  benefit: { title: string; description: string; tag: string; hoverDescription: string; };
+  cardVariants: Variants;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
       className="h-full"
-      variants={{
-        hidden: { opacity: 0, y: 30, scale: 0.95 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          transition: {
-            duration: 0.6,
-            ease: "easeOut"
-          }
-        }
-      }}
+      variants={cardVariants}
       whileHover={{ 
         y: -8,
         scale: 1.02,
